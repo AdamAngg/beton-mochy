@@ -1,5 +1,5 @@
 import "../src/variables.css";
-import "../src/index.css";
+import "../src/globals.css";
 import "../src/assets/css/acrylic.css";
 import Script from "next/script";
 import Head from "next/head";

@@ -1,0 +1,28 @@
+:root {
+  /* width */
+  --website-width: 120rem;
+
+  /* Project color palette */
+  --color-primary: #fff;
+  --color-secondary: #fff7c5;
+  --color-complementary: #ed5959;
+
+  /* Bg color */
+  --bg-primary: #fff;
+
+  /* Buttons colors */
+  --btn-primary:  background-image: linear-gradient(
+    to right bottom,var(--color-secondary),var(--color-complementary));
+
+  /* font colors */
+  --font-primary: #594545;
+  --font-secondary: #fff;
+  --font-tertiary: #fff;
+
+  /* Padding variables */
+	--min-padding: 1.5rem;
+	--padding-base: 2rem;
+	--padding-large: 3rem;
+	--padding-xlarge: 4rem;
+	--padding-xxlarge: 5rem;
+}
