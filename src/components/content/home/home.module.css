@@ -1,0 +1,8 @@
+.sectionWidth {
+  max-width: min(var(--website-width), 90vw);
+  margin: auto;
+  width: 100%;
+}
+.section {
+  height: 70rem;
+}

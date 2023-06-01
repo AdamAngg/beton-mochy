@@ -1,7 +1,6 @@
-import "../src/variables.css";
-import "../src/globals.css";
-import "../src/assets/css/acrylic.css";
-import Script from "next/script";
+import "../src/styles/variables.css";
+import "../src/styles/globals.css";
+import { Content } from "@/components/content/content";
 import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +9,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="shortcut icon" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <Component {...pageProps} />
+      <Content>
+        <Component {...pageProps} />
+      </Content>
     </>
   );
 }

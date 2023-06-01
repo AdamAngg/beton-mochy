@@ -1,14 +1,13 @@
 import Head from "next/head";
-import { Home } from "../src/components/content/home/Home";
-
-const index = () => {
+import { Home } from "@/components/content/home/home";
+function index() {
   return (
     <>
       <Head>
-        <title>betoniarnia.mochy.pl - Strona Główna</title>
+        <title>Betoniarnia.mochy.pl - Strona Główna</title>
       </Head>
       <Home />
     </>
   );
-};
+}
 export default index;

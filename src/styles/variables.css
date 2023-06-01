@@ -20,9 +20,12 @@
   --font-tertiary: #fff;
 
   /* Padding variables */
-	--min-padding: 1.5rem;
-	--padding-base: 2rem;
-	--padding-large: 3rem;
-	--padding-xlarge: 4rem;
-	--padding-xxlarge: 5rem;
+  --min-padding: 1.5rem;
+  --padding-base: 2rem;
+  --padding-large: 3rem;
+  --padding-xlarge: 4rem;
+  --padding-xxlarge: 5rem;
+
+ /* Box shadows */
+  --boxshadow-primary:box-shadow: 0 2rem 6rem 0.5rem rgba(14, 12, 12, 0.375);
 }

@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+function Document() {
   return (
     <Html lang="pl">
       <Head>
@@ -17,7 +17,7 @@ export default function Document() {
         <meta property="og:title" content="betoniarnia.mochy.pl" />
         <meta
           property="og:description"
-          content="Portfolio - Frontend Developer"
+          content="Betoniarnia Mochy - Zbigniew Pabich"
         />
         <meta
           property="og:image"
@@ -32,3 +32,4 @@ export default function Document() {
     </Html>
   );
 }
+export default Document;
