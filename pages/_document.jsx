@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="pl">
       <Head>
         <meta name="title" content="betoniarnia.mochy.pl" />
         <meta
@@ -21,7 +21,7 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://purpleblack.dev/metaimage.webp" //foto daj
+          content="" //foto daj w webp
         />
       </Head>
       <body>

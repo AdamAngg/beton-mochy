@@ -5,7 +5,7 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>purpleblack.dev - Home</title>
+        <title>betoniarnia.mochy.pl - Strona Główna</title>
       </Head>
       <Home />
     </>
