@@ -9,6 +9,7 @@ export const Slider = () => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider(0, images);
   console.log(currentSlideIndex);
+  console.log(images.length - 1);
   return (
     <>
       <button onClick={increaseIndex}>inc</button>
