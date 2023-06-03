@@ -2,12 +2,17 @@ import { useState } from "react";
 
 export const useSlider = (startingIndex, images) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(startingIndex);
+  const increaseIndex = () => {
+    setCurrentSlideIndex(currentSlideIndex + 1);
+  };
+  const decreaseIndex = () => {
+    setCurrentSlideIndex(currentSlideIndex - 1);
+  };
   let selectedImage;
-  try {
-    selectedImage = images.at(currentSlideIndex);
-    console.log(selectedImage);
-  } catch (err) {
-    currentSlideIndex > images.length ? setCurrentSlideIndex(0) : 0;
-  }
-  return { selectedImage };
+
+  currentSlideIndex > images.length - 1
+    ? setCurrentSlideIndex(0)
+    : (selectedImage = images.at(currentSlideIndex));
+
+  return { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex };
 };

@@ -6,13 +6,20 @@ import styles from "./slider.module.css";
 import blur from "../../../../../public/assets/img/header/blur.jpg";
 export const Slider = () => {
   const images = [zd1, betoniarz1];
-  const { selectedImage } = useSlider(0, images);
+  const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
+    useSlider(0, images);
+  console.log(currentSlideIndex);
   return (
-    <Image
-      src={selectedImage}
-      className={styles.image}
-      priority={true}
-      blurDataURL="../../../../../public/assets/img/header/blur.jpg"
-    />
+    <>
+      <button onClick={increaseIndex}>inc</button>
+      <button onClick={decreaseIndex}>dec</button>
+      <Image
+        src={selectedImage}
+        className={styles.image}
+        priority={true}
+        alt="hehe"
+        blurDataURL="../../../../../public/assets/img/header/blur.jpg"
+      />
+    </>
   );
 };
