@@ -18,6 +18,7 @@ export const Slider = ({ images }) => {
           name="chevron-forward-outline"
           data-set="right"
         ></ion-icon>
+
         <ion-icon
           onClick={increaseIndex}
           name="chevron-back-outline"
