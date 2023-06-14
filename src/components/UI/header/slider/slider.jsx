@@ -1,6 +1,3 @@
-import zd1 from "../../../../../public/assets/img/header/zd1.jpg";
-import betoniarz1 from "../../../../../public/assets/img/header/betoniarz1.jpg";
-
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { useSlider } from "./useSlider.hook";
@@ -9,16 +6,25 @@ import Image from "next/image";
 import styles from "./slider.module.css";
 import trans from "./sliderTransition.module.css";
 
-export const Slider = () => {
-  const images = [zd1, betoniarz1];
+export const Slider = ({ images }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider(0, images);
 
   return (
     <>
-      <button onClick={increaseIndex}>inc</button>
-      <button onClick={decreaseIndex}>dec</button>
-      <TransitionGroup className={styles.section}>
+      <div className={styles.header}>
+        <ion-icon
+          onClick={decreaseIndex}
+          name="chevron-forward-outline"
+          data-set="right"
+        ></ion-icon>
+        <ion-icon
+          onClick={increaseIndex}
+          name="chevron-back-outline"
+          data-set="left"
+        ></ion-icon>
+      </div>
+      <TransitionGroup>
         <CSSTransition
           key={currentSlideIndex}
           classNames={trans}
@@ -28,7 +34,7 @@ export const Slider = () => {
             src={selectedImage}
             className={styles.image}
             priority={true}
-            alt="hehe"
+            alt={`Zdjęcie prezentujące: ${images[currentSlideIndex]}`}
             blurDataURL="../../../../../public/assets/img/header/blur.jpg"
           />
         </CSSTransition>

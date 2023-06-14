@@ -1,3 +1,5 @@
 .section {
   height: 70rem;
+  position: relative;
+  overflow: hidden;
 }

@@ -16,8 +16,6 @@
 .exit {
   transform: scale(1);
   opacity: 0.4;
-  position: absolute;
-  top: 0;
 }
 .exitActive {
   opacity: 0;
