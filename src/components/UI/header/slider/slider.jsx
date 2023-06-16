@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "./slider.module.css";
 import trans from "./sliderTransition.module.css";
 
-export const Slider = ({ images }) => {
+export const Slider = ({ images, altText }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider(0, images);
 
@@ -35,7 +35,7 @@ export const Slider = ({ images }) => {
             src={selectedImage}
             className={styles.image}
             priority={true}
-            alt={`Zdjęcie prezentujące: ${images[currentSlideIndex]}`}
+            alt={altText[currentSlideIndex]}
             blurDataURL="../../../../../public/assets/img/header/blur.jpg"
           />
         </CSSTransition>
