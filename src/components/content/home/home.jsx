@@ -1,5 +1,6 @@
 import styles from "./home.module.css";
 import { Header } from "../../UI/header/header";
+
 const HomeComponents = [
   {
     component: <Header />,
