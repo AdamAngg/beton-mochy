@@ -2,9 +2,9 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
-  const navbarButtons = buttons.map((button) => (
-    <li className={styles.btn}>
-      <button>{button}</button>
+  const navbarButtons = buttons.map((button, i) => (
+    <li key={i} className={styles.btn_wrapper}>
+      <button className={styles.btn}>{button}</button>
     </li>
   ));
   return (

@@ -11,9 +11,7 @@
   --bg-primary: #fff;
 
   /* Buttons colors */
-  --btn-primary:  background-image: linear-gradient(
-    to right bottom,var(--color-secondary),var(--color-complementary));
-
+  --btn-primary: linear-gradient(to right bottom, var(--color-secondary), var(--color-complementary));
   /* font colors */
   --font-primary: #594545;
   --font-secondary: #fff;
@@ -28,4 +26,7 @@
 
  /* Box shadows */
   --boxshadow-primary:box-shadow: 0 2rem 6rem 0.5rem rgba(14, 12, 12, 0.375);
+
+ /*Font Size */
+ --fontSize-large:2.2rem;
 }
