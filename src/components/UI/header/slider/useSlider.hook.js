@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useSlider = (startingIndex, images) => {
+export const useSlider = ({ startingIndex, images, delay }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(startingIndex);
   const [isDisabled, setIsDisabled] = useState(false);
   let selectedImage = images.at(currentSlideIndex);
@@ -41,7 +41,7 @@ export const useSlider = (startingIndex, images) => {
           ? setCurrentSlideIndex(0)
           : (selectedImage = images.at(currentSlideIndex)) &&
             setCurrentSlideIndex(currentSlideIndex + 1);
-      }, 10000);
+      }, delay);
       return () => clearInterval(interval);
     }
     blockNavigation();
