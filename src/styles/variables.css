@@ -28,5 +28,6 @@
   --boxshadow-primary:box-shadow: 0 2rem 6rem 0.5rem rgba(14, 12, 12, 0.375);
 
  /*Font Size */
+ --fontSize-medium:1.8rem;
  --fontSize-large:2.2rem;
 }

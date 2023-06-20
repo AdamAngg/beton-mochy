@@ -6,4 +6,4 @@ export const images = [
   [betoniarz1, "Zdjecie przestawia gruszke "],
 ];
 export const navbarBtn = ["place", "place", "place", "place", "place"];
-export const logo = [logoBeton, "Logo firmy Betoniarnia Przemęt"];
+export const logo = { logo: logoBeton, text: "Logo firmy Betoniarnia Przemęt" };
