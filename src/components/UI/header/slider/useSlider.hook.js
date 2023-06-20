@@ -36,7 +36,6 @@ export const useSlider = ({ startingIndex, images, delay }) => {
   useEffect(() => {
     if (!isDisabled) {
       const interval = setInterval(() => {
-        console.log(currentSlideIndex);
         currentSlideIndex >= images.length - 1
           ? setCurrentSlideIndex(0)
           : (selectedImage = images.at(currentSlideIndex)) &&
