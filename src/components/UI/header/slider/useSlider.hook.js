@@ -45,7 +45,7 @@ export const useSlider = ({ startingIndex, images, delay }) => {
       return () => clearInterval(interval);
     }
     blockNavigation();
-  }, [currentSlideIndex]);
+  }, [currentSlideIndex, isDisabled]);
 
   return {
     selectedImage,
