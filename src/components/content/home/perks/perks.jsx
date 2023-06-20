@@ -4,13 +4,26 @@ import Image from "next/image";
 
 export const Perks = () => {
   const icons = iconsArray.map(([icons, altText]) => (
-    <Image
-      src={icons}
-      className={styles.icons}
-      priority={true}
-      alt={altText}
-      blurDataURL="../../../../../public/assets/img/header/blur.jpg"
-    />
+    <>
+      <div className={styles.column_container}>
+        <Image
+          src={icons}
+          className={styles.icons}
+          priority={true}
+          alt={altText}
+          blurDataURL="../../../../../public/assets/img/header/blur.jpg"
+        />
+        <span className={styles.title}>Lorem Ipsum</span>
+        <p className={styles.text}>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, sunt,
+          nemo numquam, sapiente nesciunt nihil a maxime quia totam neque alias
+          quibusdam culpa accusantium doloremque veritatis unde est molestiae
+          enim harum animi error. Molestias exercitationem sit iure pariatur
+          nulla fugit facere est facilis saepe corporis quam voluptatem, non,
+          rem voluptatum!
+        </p>
+      </div>
+    </>
   ));
-  return <div className={styles.icons_container}>{icons}</div>;
+  return <div className={styles.row_container}>{icons}</div>;
 };

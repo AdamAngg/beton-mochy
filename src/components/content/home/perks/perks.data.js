@@ -1,11 +1,11 @@
-import pojazd from "../../../../../public/assets/img/perks/pojazd.png";
-import pracownik from "../../../../../public/assets/img/perks/pracownik.png";
-import produkcja from "../../../../../public/assets/img/perks/produkcja.png";
-import taczka from "../../../../../public/assets/img/perks/taczka.png";
+import cement from "../../../../../public/assets/img/perks/cement.png";
+import concretemix from "../../../../../public/assets/img/perks/concrete-mixer.png";
+import project from "../../../../../public/assets/img/perks/project-management.png";
+import trophy from "../../../../../public/assets/img/perks/trophy.png";
 
 export const iconsArray = [
-  [pojazd, "Zdjecie przedstawia ikonę pojazdu"],
-  [pracownik, "Zdjecie przedstawia ikonę pracownika"],
-  [produkcja, "Zdjecię przedstawią ikonę produkcji betonu"],
-  [taczka, "Zdjęcie przedstawia ikonę taczki"],
+  [cement, "Zdjecie przedstawia ikonę worka cementu"],
+  [concretemix, "Zdjecie przedstawia ikonę maszyny do mieszania betonu"],
+  [project, "Zdjecię przedstawią ikonę projektu"],
+  [trophy, "Zdjęcie przedstawia ikonę puchary"],
 ];
