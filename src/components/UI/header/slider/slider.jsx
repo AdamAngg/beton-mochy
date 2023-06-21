@@ -1,7 +1,7 @@
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { useSlider } from "./useSlider.hook";
-
+import { UseSlowLoad } from "@/hooks/useSlowLoad.hook";
 import Image from "next/image";
 import styles from "./slider.module.css";
 import trans from "./sliderTransition.module.css";
@@ -9,7 +9,7 @@ import trans from "./sliderTransition.module.css";
 export const Slider = ({ images, altText }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider({ startingIndex: 0, images: images, delay: 10000 });
-
+  const { imageLoaded, handleImageLoad } = UseSlowLoad();
   return (
     <>
       <div className={styles.header}>
@@ -32,8 +32,10 @@ export const Slider = ({ images, altText }) => {
           timeout={2000}
         >
           <Image
+            onLoad={handleImageLoad}
+            style={{ opacity: imageLoaded ? 0.4 : 0 }}
             src={selectedImage}
-            className={styles.image}
+            className={`${styles.image}`}
             priority={true}
             alt={altText[currentSlideIndex]}
             blurDataURL="../../../../../public/assets/img/header/blur.jpg"

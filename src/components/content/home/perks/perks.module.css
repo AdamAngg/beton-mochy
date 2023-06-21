@@ -1,10 +1,10 @@
-.row_container {
+.container {
   margin-top: 5rem;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-self: center;
+  justify-content: space-evenly;
+  min-width: var(--website-width);
 }
 .icons {
   height: 13rem;
@@ -29,7 +29,7 @@
   font-weight: 600;
 }
 .text {
-  width: 30rem;
+  width: 20rem;
   word-wrap: break-word;
   text-align: center;
   font-size: var(--fontSize-minimal);

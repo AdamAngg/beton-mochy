@@ -25,5 +25,5 @@ export const Perks = () => {
       </div>
     </>
   ));
-  return <div className={styles.row_container}>{icons}</div>;
+  return <div className={styles.container}>{icons}</div>;
 };

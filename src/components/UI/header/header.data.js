@@ -5,5 +5,13 @@ export const images = [
   [zd1, "Zdjecie przedstawia widok"],
   [betoniarz1, "Zdjecie przestawia gruszke "],
 ];
-export const navbarBtn = ["place", "place", "place", "place", "place"];
+export const navbarBtn = [
+  "place",
+  "place",
+  "place",
+  "place",
+  "place",
+  "place",
+  "place",
+];
 export const logo = { logo: logoBeton, text: "Logo firmy Betoniarnia Przemęt" };

@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 2rem;
+  gap: 1.2rem;
   height: 60%;
 }
 .btn_wrapper {
@@ -27,11 +27,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: var(--btn-primary);
+  background: #252525;
   opacity: 0;
   width: 100%;
   height: 100%;
-
   border-radius: 5%;
   z-index: -1;
 }
@@ -39,8 +38,9 @@
   opacity: 1;
 }
 .btn {
+  font: inherit;
   background: none;
-  color: var(--font-primary);
+  color: #ffffff;
   font-size: var(--fontSize-medium);
   font-weight: 600;
   border: none;
@@ -48,6 +48,6 @@
   text-transform: uppercase;
 }
 .btn:hover {
-  color: white;
+  color: red;
   cursor: pointer;
 }
