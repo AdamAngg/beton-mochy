@@ -9,9 +9,13 @@
 
   /* Bg color */
   --bg-primary: #fff;
+  --bg-secondary: #F0F0F0;
+
 
   /* Buttons colors */
   --btn-primary: linear-gradient(to right bottom, var(--color-secondary), var(--color-complementary));
+  --btn-secondary: #252525;
+
   /* font colors */
   --font-primary: #594545;
   --font-secondary: #fff;

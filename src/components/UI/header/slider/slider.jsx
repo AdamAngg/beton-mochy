@@ -33,9 +33,8 @@ export const Slider = ({ images, altText }) => {
         >
           <Image
             onLoad={handleImageLoad}
-            style={{ opacity: imageLoaded ? 0.4 : 0 }}
             src={selectedImage}
-            className={`${styles.image}`}
+            className={`${styles.image} ${imageLoaded ? styles.loaded : ""}`}
             priority={true}
             alt={altText[currentSlideIndex]}
             blurDataURL="../../../../../public/assets/img/header/blur.jpg"

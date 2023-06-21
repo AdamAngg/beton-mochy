@@ -3,9 +3,9 @@ import { iconsArray } from "./perks.data";
 import Image from "next/image";
 
 export const Perks = () => {
-  const icons = iconsArray.map(([icons, altText]) => (
+  const icons = iconsArray.map(([icons, altText], i) => (
     <>
-      <div className={styles.column_container}>
+      <div key={i} className={styles.column_container}>
         <Image
           src={icons}
           className={styles.icons}
