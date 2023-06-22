@@ -6,6 +6,7 @@ export const Perks = () => {
   const icons = iconsArray.map(([icons, altText], i) => (
     <>
       <div key={i} className={styles.column_container}>
+        <div className={styles.border}></div>
         <Image
           src={icons}
           className={styles.icons}
