@@ -1,10 +1,15 @@
 import styles from "./navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
   const navbarButtons = buttons.map((button, i) => (
     <li key={i} className={styles.btn_wrapper}>
-      <button className={styles.btn}>{button}</button>
+      <Link href="#perks">
+        <button className={styles.btn}>
+          <span>{button}</span>
+        </button>
+      </Link>
     </li>
   ));
   return (
