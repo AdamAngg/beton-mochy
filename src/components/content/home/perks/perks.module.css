@@ -28,58 +28,48 @@
   filter: brightness(0.5);
   opacity: 0.5;
 }
-.column_container::before {
-  content: "";
-  width: 0;
-  height: 2px;
-  position: absolute;
-  transition: all 0.2s linear;
-  background: #fff;
-  top: 0%;
-}
+.column_container::before,
 .column_container::after {
   content: "";
   width: 0;
   height: 2px;
   position: absolute;
   transition: all 0.2s linear;
-  background: #fff;
-  bottom: 0%;
+  background: var(--font-primary);
 }
-.column_container > span,
-.column_container > p {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.column_container::before {
+  top: 0;
 }
+
+.column_container::after {
+  bottom: 0;
+}
+
 .border {
-  flex-grow: 1;
   height: 100%;
   width: 100%;
   position: absolute;
 }
-.border::after {
-  content: "";
-  width: 2px;
-  height: 0;
-  position: absolute;
-  transition: all 0.2s linear;
-  background: #fff;
-  left: 0%;
-}
+.border::after,
 .border::before {
   content: "";
   width: 2px;
   height: 0;
   position: absolute;
   transition: all 0.2s linear;
-  background: #fff;
-  right: 0%;
+  background: var(--font-primary);
+}
+.border::after {
+  left: 0;
+}
+
+.border::before {
+  right: 0;
 }
 .column_container:hover {
   opacity: 1;
   filter: brightness(1);
+  transform: translateY(-10px);
 }
 .column_container:hover::before,
 .column_container:hover::after {
@@ -88,16 +78,25 @@
 .border:hover:after,
 .border:hover:before {
   height: 100%;
+  transition-delay: 0.3s;
 }
-.title {
+
+.column_container > span {
   font-size: var(--fontSize-large);
   font-weight: 600;
 }
-.text {
+.column_container > p {
   width: 30rem;
   word-wrap: break-word;
   text-align: center;
   font-size: var(--fontSize-minimal);
   font-weight: 300;
   line-height: 2rem;
+}
+.column_container > span,
+.column_container > p {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
