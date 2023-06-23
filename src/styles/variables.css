@@ -5,7 +5,7 @@
   /* Project color palette */
   --color-primary: #fff;
   --color-secondary: #fff7c5;
-  --color-complementary: #ed5959;
+  --color-complementary: #c3252f;
 
   /* Bg color */
   --bg-primary: #fff;
@@ -13,7 +13,7 @@
 
 
   /* Buttons colors */
-  --btn-primary: linear-gradient(to right bottom, var(--color-secondary), var(--color-complementary));
+  --btn-primary: var(--color-complementary);
   --btn-secondary: #252525;
 
   /* font colors */
@@ -35,4 +35,5 @@
  --fontSize-minimal:1.4rem;
  --fontSize-medium:1.8rem;
  --fontSize-large:2.2rem;
+ --fontSize-extraLarge:3.6rem;
 }

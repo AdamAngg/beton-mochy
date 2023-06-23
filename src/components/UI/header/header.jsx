@@ -1,7 +1,7 @@
 import styles from "./header.module.css";
 import { Slider } from "./slider/slider";
 import { images } from "./header.data";
-import { Navbar } from "./navbar/navbar";
+import { Navbar } from "../navbar/navbar";
 import { logo } from "./header.data";
 import { navbarBtn } from "./header.data";
 

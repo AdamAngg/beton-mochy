@@ -2,6 +2,7 @@ import styles from "./perks.module.css";
 import { perksArray } from "./perks.data";
 import Image from "next/image";
 import { UseSlowLoad } from "@/hooks/useSlowLoad.hook";
+import { title } from "./perks.data";
 
 export const Perks = () => {
   const { imageLoaded, handleImageLoad } = UseSlowLoad();
@@ -22,5 +23,12 @@ export const Perks = () => {
       </div>
     </>
   ));
-  return <div className={styles.container}>{perks}</div>;
+  return (
+    <>
+      <div className={styles.main_title_wrapper}>
+        <h1 className={styles.main_title}>{title}</h1>
+      </div>
+      <div className={styles.container}>{perks}</div>
+    </>
+  );
 };

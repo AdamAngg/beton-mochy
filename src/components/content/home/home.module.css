@@ -9,10 +9,15 @@
   overflow: hidden;
 }
 .perks {
-  height: 45rem;
+  height: 65rem;
   overflow: hidden;
   background-image: url("../../../../public/assets/img/perks/concrete.png");
   background-repeat: repeat;
   background-position: right top;
   background-color: rgba(255, 255, 255, 0.174);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  gap: 4.2rem;
 }

@@ -2,7 +2,7 @@ import cement from "../../../../../public/assets/img/perks/cement.png";
 import concretemix from "../../../../../public/assets/img/perks/concrete-mixer.png";
 import project from "../../../../../public/assets/img/perks/project-management.png";
 import trophy from "../../../../../public/assets/img/perks/trophy.png";
-
+export const title = "Nasze najważniejsze wartości";
 export const perksArray = [
   {
     icon: cement,

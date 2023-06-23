@@ -1,10 +1,29 @@
 .container {
   margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   min-width: var(--website-width);
+}
+.main_title_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.main_title {
+  font: inherit;
+  font-size: var(--fontSize-extraLarge);
+  position: relative;
+}
+.main_title::after {
+  position: absolute;
+  content: "";
+  left: 45%;
+  bottom: -30%;
+  background-color: var(--color-complementary);
+  width: 15%;
+  height: 3px;
+  transition: all 0.3s;
 }
 .icons {
   opacity: 0;
@@ -15,7 +34,7 @@
   -ms-user-select: none;
   user-select: none;
   padding: var(--padding-base);
-  background-image: var(--btn-primary);
+  background: var(--btn-primary);
   transition: all 0.3s;
 }
 .loaded {
