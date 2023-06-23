@@ -1,6 +1,7 @@
 import styles from "./home.module.css";
 import { Header } from "../../UI/header/header";
 import { Perks } from "./perks/perks";
+import { About } from "./about/about";
 
 const HomeComponents = [
   {
@@ -14,6 +15,12 @@ const HomeComponents = [
     styleName: "perks",
     witdh: false,
     id: "perks",
+  },
+  {
+    component: <About />,
+    styleName: "about",
+    witdh: true,
+    id: "about",
   },
 ];
 export const Home = () => {
