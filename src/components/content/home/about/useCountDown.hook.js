@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const useCountDown = ({ delay }) => {
+export const useCountDown = ({ inView, delay }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
+    if (!inView) return;
     const countDown = () => {
-      setCount(count + 1);
+      setCount((prevCount) => prevCount + 1);
     };
     const interval = setInterval(countDown, delay);
 
@@ -12,7 +13,7 @@ export const useCountDown = ({ delay }) => {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [count]);
+  }, [inView, count]);
 
   return count;
 };

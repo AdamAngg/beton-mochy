@@ -1,7 +1,14 @@
+import { useEffect } from "react";
 import styles from "./about.module.css";
 import { useCountDown } from "./useCountDown.hook";
+import { useInView } from "react-intersection-observer";
 export const About = () => {
-  const years = useCountDown({ delay: 100 });
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
+
+  const years = useCountDown({ inView: inView, delay: 100 });
+
   return (
     <div className={styles.container}>
       <div className={styles.about}>
@@ -15,7 +22,7 @@ export const About = () => {
           corporis cupiditate quia sunt?
         </p>
       </div>
-      <div className={styles.years_container}>
+      <div ref={ref} className={styles.years_container}>
         <span className={styles.years}>{years}</span>
         <p className={styles.years_text}>Lat Doświadczenia w branży</p>
       </div>
