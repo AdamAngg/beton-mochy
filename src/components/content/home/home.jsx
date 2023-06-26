@@ -19,7 +19,7 @@ const HomeComponents = [
   {
     component: <About />,
     styleName: "about",
-    witdh: true,
+    witdh: false,
     id: "about",
   },
 ];

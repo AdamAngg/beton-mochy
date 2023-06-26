@@ -19,3 +19,8 @@
   padding-bottom: 4rem;
   gap: 4.2rem;
 }
+.about {
+  display: flex;
+  justify-content: center;
+  background-image: var(--bg-tertiary);
+}
