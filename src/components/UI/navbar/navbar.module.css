@@ -8,24 +8,7 @@
   transition: all 0.3s;
   z-index: 4;
 }
-/* .navbar::after {
-  content: "";
-  position: absolute;
-  background: #ffffff;
-  width: 130%;
-  height: 400%;
-  transition: all 0.3s;
-  bottom: -70%;
-  right: -15%;
-  z-index: -1;
-  border-radius: 50%;
-  background-image: url("../../../../public/assets/img/perks/concrete.png");
-}
-.navbar:hover::after,
-.navbar {
-  transform: translateY(10px);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-} */
+
 .logo {
   cursor: pointer;
 }
@@ -70,12 +53,12 @@
   bottom: 0;
   left: 0;
 }
-.btn:hover {
+.btn_wrapper:hover .btn {
   color: red;
   cursor: pointer;
 }
-.btn_wrapper:has(.btn:hover)::after,
-.btn_wrapper:has(.btn:hover)::before {
+.btn_wrapper:hover::after,
+.btn_wrapper:hover::before {
   width: 100%;
 }
 .btn::after,
@@ -95,7 +78,7 @@
   top: 0;
   right: 0;
 }
-.btn:hover::after,
-.btn:hover::before {
+.btn_wrapper:hover .btn::after,
+.btn_wrapper:hover .btn::before {
   height: 100%;
 }
