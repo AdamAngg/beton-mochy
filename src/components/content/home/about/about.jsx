@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from "./about.module.css";
 import { useCountDown } from "./useCountDown.hook";
 import { useInView } from "react-intersection-observer";

@@ -5,6 +5,10 @@
   justify-content: space-around;
   gap: 20rem;
   align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .about {
   width: 60rem;

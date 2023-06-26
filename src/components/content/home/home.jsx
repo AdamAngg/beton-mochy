@@ -2,6 +2,7 @@ import styles from "./home.module.css";
 import { Header } from "../../UI/header/header";
 import { Perks } from "./perks/perks";
 import { About } from "./about/about";
+import { Product } from "./product/product";
 
 const HomeComponents = [
   {
@@ -21,6 +22,12 @@ const HomeComponents = [
     styleName: "about",
     witdh: false,
     id: "about",
+  },
+  {
+    component: <Product />,
+    styleName: "Product",
+    witdh: false,
+    id: "product",
   },
 ];
 export const Home = () => {
