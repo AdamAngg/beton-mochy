@@ -1,6 +1,14 @@
-.h {
+.slider {
   overflow: hidden;
+
+  margin: 0;
+  width: 70rem;
+}
+.sliderItems {
   display: flex;
   flex-direction: row;
-  margin: 0;
+}
+
+.sliderItem {
+  flex: 0 0 calc(100% / 5);
 }
