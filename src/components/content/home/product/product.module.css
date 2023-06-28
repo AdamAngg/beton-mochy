@@ -1,13 +1,13 @@
 .sliderItems {
   display: flex;
-  width: 100%;
+  width: 65rem;
   overflow: hidden;
 }
 
 .sliderItem {
   flex: 0 0 20%;
+
   max-width: 20%;
-  z-index: 100000000;
 }
 
 .sliderItem img {

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styles from "./product.module.css";
 import transitionStyles from "./productTransition.module.css";
+
 import zd1 from "@/../public/assets/img/product/1.png";
 import zd2 from "@/../public/assets/img/product/2.png";
 import zd3 from "@/../public/assets/img/product/3.png";
@@ -13,39 +14,57 @@ import zd7 from "@/../public/assets/img/product/7.png";
 export const Product = () => {
   const [items, setItems] = useState([zd1, zd2, zd3, zd4, zd5, zd6, zd7]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
+  const ref = useRef();
 
   const handleClickPrevious = () => {
+    setTranslateX((prevTranslateX) => prevTranslateX + 100);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
+    updateItems();
   };
 
   const handleClickNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 1 ? 0 : prevIndex + 1
-    );
-    const zdjecie = items.at(0);
+    setTranslateX((prevTranslateX) => prevTranslateX - 100);
+    setCurrentIndex((prevIndex) => (prevIndex === 7 ? 1 : prevIndex + 1));
+    console.log(currentIndex);
 
-    console.log(zdjecie);
-    setItems((prevItems) => [...prevItems.slice(1), zdjecie]);
-
-    console.log(items);
+    if (currentIndex === 6) {
+      setItems([zd1, zd2, zd3, zd4, zd5, zd6, zd7]);
+      setTranslateX(0);
+    } else updateItems();
+  };
+  const style = {
+    transition: currentIndex === 7 ? " " : "all 0.3s !important ",
+    transition: currentIndex !== 7 ? "all 0.3s !important " : " ",
+    transform: `translateX(${translateX}%)`,
   };
 
-  const sliderStyle = {
-    transform: `translateX(-${20}%)`,
+  const updateItems = () => {
+    const zdjecie = items[currentIndex === 7 ? 0 : currentIndex];
+    setItems((prevItems) => [...prevItems, zdjecie]);
   };
 
   return (
     <div className={styles.slider}>
       <button onClick={handleClickPrevious}>Previous</button>
-
-      <div className={styles.sliderItems} style={sliderStyle}>
-        {items.map((item, index) => (
-          <div className={styles.sliderItem}>
-            <img src={item.src} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
+      <div className="container">
+        <div className={styles.sliderItems}>
+          {items.map((item, index) => {
+            console.log(item, index, currentIndex);
+            return (
+              <div
+                ref={ref}
+                key={index}
+                className={styles.sliderItem}
+                style={style}
+              >
+                <img src={item.src} alt={`Image ${index + 1}`} />
+              </div>
+            );
+          })}
+        </div>
       </div>
       <button onClick={handleClickNext}>Next</button>
     </div>

@@ -8,7 +8,7 @@ import trans from "./sliderTransition.module.css";
 
 export const Slider = ({ images, altText }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
-    useSlider({ startingIndex: 0, images: images, delay: 10000 });
+    useSlider({ startingIndex: 0, images: images, delay: 10000000000000 });
   const { imageLoaded, handleImageLoad } = UseSlowLoad();
   return (
     <>
