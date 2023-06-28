@@ -1,14 +1,16 @@
-.slider {
-  overflow: hidden;
-
-  margin: 0;
-  width: 70rem;
-}
 .sliderItems {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
 }
 
 .sliderItem {
-  flex: 0 0 calc(100% / 5);
+  flex: 0 0 20%;
+  max-width: 20%;
+  z-index: 100000000;
+}
+
+.sliderItem img {
+  width: 100%;
+  height: auto;
 }

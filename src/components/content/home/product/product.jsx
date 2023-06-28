@@ -18,22 +18,22 @@ export const Product = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
-    setItems((prevItems) => [...prevItems, "hehe"]);
   };
 
   const handleClickNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === items.length - 1 ? 0 : prevIndex + 1
     );
-    const zdjecie = require(`../../../../../public/assets/img/product/${Math.abs(
-      currentIndex - 5
-    )}.png`);
-    setItems((prevItems) => [...prevItems, zdjecie]);
+    const zdjecie = items.at(0);
+
     console.log(zdjecie);
+    setItems((prevItems) => [...prevItems.slice(1), zdjecie]);
+
+    console.log(items);
   };
 
   const sliderStyle = {
-    transform: `translateX(-${currentIndex * 20}%)`,
+    transform: `translateX(-${20}%)`,
   };
 
   return (
