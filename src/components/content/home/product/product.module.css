@@ -1,7 +1,13 @@
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 65rem;
+}
 .sliderItems {
   display: flex;
-  width: 65rem;
-  overflow: hidden;
+
+  overflow: unset;
+  will-change: transform, transition;
 }
 
 .sliderItem {
