@@ -34,8 +34,8 @@
   --boxshadow-secondary:box-shadow
 
  /*Font Size */
- --fontSize-minimal: 1.4rem;
- --fontSize-medium:1.8rem;
- --fontSize-large:2.2rem;
- --fontSize-extraLarge:3.6rem;
+ --fontSize-small: 2rem;
+ --fontSize-medium:2.4rem;
+ --fontSize-large:3rem;
+ --fontSize-extraLarge:4.4rem;
 }

@@ -19,11 +19,17 @@
   gap: 1.2rem;
   height: 60%;
 }
-.btn_wrapper {
+
+.btn_element {
   display: flex;
   align-items: center;
   padding: var(--padding-large);
   position: relative;
+}
+.btn_wrapper {
+  height: auto;
+  width: auto;
+  position: absolute;
 }
 .btn {
   font: inherit;
@@ -36,8 +42,8 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.btn_wrapper::after,
-.btn_wrapper::before {
+.btn_element::after,
+.btn_element::before {
   content: "";
   position: absolute;
   background: #ffffff;
@@ -45,20 +51,20 @@
   height: 2px;
   transition: all 0.3s;
 }
-.btn_wrapper::after {
+.btn_element::after {
   top: 0;
   left: 0;
 }
-.btn_wrapper::before {
+.btn_element::before {
   bottom: 0;
   left: 0;
 }
-.btn_wrapper:hover .btn {
+.btn_element:hover .btn {
   color: var(--color-complementary);
   cursor: pointer;
 }
-.btn_wrapper:hover::after,
-.btn_wrapper:hover::before {
+.btn_element:hover::after,
+.btn_element:hover::before {
   width: 100%;
 }
 .btn::after,
@@ -78,10 +84,10 @@
   top: 0;
   right: 0;
 }
-.btn_wrapper:hover .btn::after,
-.btn_wrapper:hover .btn::before {
+.btn_element:hover .btn::after,
+.btn_element:hover .btn::before {
   height: 100%;
 }
-.btn_wrapper:hover {
+.btn_element:hover {
   background-color: #00000072;
 }

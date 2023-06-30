@@ -4,17 +4,17 @@ import Link from "next/link";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
   const navbarButtons = buttons.map((button, i) => (
-    <li key={i} className={styles.btn_wrapper}>
-      <Link href="#perks">
-        <button className={styles.btn}>
-          <span>{button}</span>
-        </button>
-      </Link>
+    <li key={i} className={styles.btn_element}>
+      <Link href="#perks" className={styles.btn_wrapper}></Link>
+      <button className={styles.btn}>
+        <span>{button}</span>
+      </button>
     </li>
   ));
   return (
     <div className={styles.navbar}>
       <Image
+        key={logo}
         src={logo}
         className={styles.logo}
         priority={true}
