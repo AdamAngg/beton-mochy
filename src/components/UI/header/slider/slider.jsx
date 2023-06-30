@@ -10,6 +10,7 @@ export const Slider = ({ images, altText }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider({ startingIndex: 0, images: images, delay: 10000000000000 });
   const { imageLoaded, handleImageLoad } = UseSlowLoad();
+  console.log(selectedImage);
   return (
     <>
       <div className={styles.header}>
@@ -37,7 +38,7 @@ export const Slider = ({ images, altText }) => {
             className={`${styles.image} ${imageLoaded ? styles.loaded : ""}`}
             priority={true}
             alt={altText[currentSlideIndex]}
-            blurDataURL="../../../../../public/assets/img/header/blur.jpg"
+            blurDataURL={selectedImage.blurDataURL}
           />
         </CSSTransition>
       </TransitionGroup>

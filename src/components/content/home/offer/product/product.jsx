@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./product.module.css";
 import { useProductSlider } from "./useProductSlider.hook";
 
@@ -6,19 +7,19 @@ export const Product = ({ items }) => {
   const { handleClickPrevious, handleClickNext, currentIndex, style } =
     useProductSlider({ array: items });
   const products = items.map((item, index) => {
-    console.log(item, index, currentIndex);
+    console.log(item.data);
     return (
       <>
         <picture key={index} className={styles.sliderItem}>
-          <img src={item.data.src} alt={`Obraz pokazuje ${item.alt}`} />
+          <Image
+            width={305}
+            height={305}
+            priority={true}
+            src={item.data.src}
+            alt={`Obraz pokazuje ${item.alt}`}
+            blurDataURLp={item.data.blurDataURL}
+          />
         </picture>
-        <div className={styles.info_container}>
-          <h3></h3>
-          <span></span>
-          <Link href={"/"}>
-            <button></button>
-          </Link>
-        </div>
       </>
     );
   });
@@ -46,6 +47,13 @@ export const Product = ({ items }) => {
             {products}
           </div>
         </div>
+      </div>
+      <div className={styles.info_container}>
+        <h3>{items[currentIndex].title}</h3>
+        <span>{items[currentIndex].text}</span>
+        <Link href={items[currentIndex].href}>
+          <button></button>
+        </Link>
       </div>
     </>
   );

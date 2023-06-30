@@ -70,6 +70,7 @@
   display: flex;
   overflow: unset;
   will-change: transform, transition;
+  position: relative;
 }
 
 .sliderItem {
@@ -86,7 +87,5 @@
   user-select: none;
 }
 .info_container {
-  position: absolute;
-  top: 100%;
   width: 90rem;
 }
