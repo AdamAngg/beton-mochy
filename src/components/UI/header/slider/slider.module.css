@@ -18,7 +18,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.439);
+  background: rgba(163, 163, 163, 0.439);
 }
 .header ion-icon[data-set="left"] {
   position: absolute;

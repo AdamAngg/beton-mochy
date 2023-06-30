@@ -5,7 +5,7 @@ import styles from "./product.module.css";
 import { useProductSlider } from "./useProductSlider.hook";
 import zd1 from "@/../public/assets/img/product/1.png";
 import zd2 from "@/../public/assets/img/product/2.png";
-import zd3 from "@/../public/assets/img/product/3.png";
+import zd3 from "@/../public/assets/img/product/3.webp";
 import zd4 from "@/../public/assets/img/product/4.png";
 import zd5 from "@/../public/assets/img/product/5.png";
 import zd6 from "@/../public/assets/img/product/6png.png";
