@@ -6,11 +6,11 @@ import zd5 from "@/../public/assets/img/offer/product/5.webp";
 import zd6 from "@/../public/assets/img/offer/product/6.webp";
 import zd7 from "@/../public/assets/img/offer/product/7.webp";
 export const items = [
-  { data: zd1, alt: "Alt" },
-  { data: zd2, alt: "Alt" },
-  { data: zd3, alt: "Alt" },
-  { data: zd4, alt: "Alt" },
-  { data: zd5, alt: "Alt" },
-  { data: zd6, alt: "Alt" },
-  { data: zd7, alt: "Alt" },
+  { data: zd1, alt: "Alt", title: "Blok1", text: "" },
+  { data: zd2, alt: "Alt", title: "Blok2", text: "" },
+  { data: zd3, alt: "Alt", title: "Blok3", text: "" },
+  { data: zd4, alt: "Alt", title: "Blok4", text: "" },
+  { data: zd5, alt: "Alt", title: "Blok5", text: "" },
+  { data: zd6, alt: "Alt", title: "Blok6", text: "" },
+  { data: zd7, alt: "Alt", title: "Blok7", text: "" },
 ];
