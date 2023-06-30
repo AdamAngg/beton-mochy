@@ -2,7 +2,7 @@ import styles from "./home.module.css";
 import { Header } from "../../UI/header/header";
 import { Perks } from "./perks/perks";
 import { About } from "./about/about";
-import { Product } from "./product/product";
+import { Offer } from "./offer/offer";
 
 const HomeComponents = [
   {
@@ -24,10 +24,10 @@ const HomeComponents = [
     id: "about",
   },
   {
-    component: <Product />,
-    styleName: "Product",
+    component: <Offer />,
+    styleName: "offer",
     witdh: false,
-    id: "product",
+    id: "offer",
   },
 ];
 export const Home = () => {

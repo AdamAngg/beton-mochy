@@ -1,0 +1,68 @@
+.main_title {
+  font: inherit;
+  font-size: var(--fontSize-extraLarge);
+  position: relative;
+  font-weight: 600;
+}
+.main_title::after {
+  position: absolute;
+  content: "";
+  left: 35%;
+  bottom: -30%;
+  background-color: var(--color-complementary);
+  width: 30%;
+  height: 3px;
+  transition: all 0.3s;
+}
+.slider {
+  position: relative;
+}
+.slider ion-icon[data-set="left"] {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  top: 50%;
+  cursor: pointer;
+  margin-left: 2rem;
+  transition: all 0.3s;
+  color: var(--color-complementary);
+}
+.slider ion-icon[data-set="right"] {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  top: 50%;
+  right: 0%;
+  z-index: 3;
+  cursor: pointer;
+  margin-right: 2rem;
+  transition: all 0.3s;
+  color: var(--color-complementary);
+}
+.slider ion-icon[data-set="right"]:hover,
+.slider ion-icon[data-set="left"]:hover {
+  transform: translateY(-5px);
+}
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.sliderItems {
+  display: flex;
+  overflow: unset;
+  will-change: transform, transition;
+}
+
+.sliderItem {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.sliderItem img {
+  width: 100%;
+  height: 100%;
+}

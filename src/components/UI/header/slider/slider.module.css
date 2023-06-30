@@ -42,9 +42,9 @@
   transition: all 0.3s;
   color: whitesmoke;
 }
-.header ion-icon[data-set="right"]:hover {
-  background: rgba(74, 73, 73, 0.566);
-}
+
+.header ion-icon[data-set="right"]:hover,
 .header ion-icon[data-set="left"]:hover {
+  transform: translateY(-5px);
   background: rgba(74, 73, 73, 0.566);
 }

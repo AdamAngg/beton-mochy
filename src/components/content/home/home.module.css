@@ -24,3 +24,10 @@
   justify-content: center;
   background-image: var(--bg-tertiary);
 }
+.offer {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
