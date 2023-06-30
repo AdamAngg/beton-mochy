@@ -27,14 +27,15 @@
   position: relative;
 }
 .btn_wrapper {
-  height: auto;
-  width: auto;
+  left: 0%;
+  height: 100%;
+  width: 100%;
   position: absolute;
 }
 .btn {
   font: inherit;
   background: none;
-  color: #fff;
+  color: var(--color-complementary);
   font-size: var(--fontSize-medium);
   font-weight: 600;
   border: none;
@@ -60,7 +61,7 @@
   left: 0;
 }
 .btn_element:hover .btn {
-  color: var(--color-complementary);
+  color: #ffffff;
   cursor: pointer;
 }
 .btn_element:hover::after,
