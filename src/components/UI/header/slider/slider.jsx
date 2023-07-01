@@ -10,7 +10,6 @@ export const Slider = ({ images, altText }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider({ startingIndex: 0, images: images, delay: 10000000000000 });
   const { imageLoaded, handleImageLoad } = UseSlowLoad();
-  console.log(selectedImage);
   return (
     <>
       <div className={styles.header}>

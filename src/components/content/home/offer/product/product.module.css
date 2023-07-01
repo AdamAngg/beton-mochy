@@ -45,6 +45,7 @@
 }
 .slider ion-icon[data-set="right"]:hover,
 .slider ion-icon[data-set="left"]:hover {
+  cursor: pointer;
   transform: translateY(-5px);
 }
 .container {
@@ -87,5 +88,15 @@
   user-select: none;
 }
 .info_container {
-  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.info_title {
+  font: inherit;
+  font-size: var(--fontSize-medium);
+  position: relative;
+  font-weight: 600;
 }
