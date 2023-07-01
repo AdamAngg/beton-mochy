@@ -31,10 +31,10 @@
 
  /* Box shadows */
   --boxshadow-primary:box-shadow: 0 2rem 6rem 0.5rem rgba(14, 12, 12, 0.375);
-  --boxshadow-secondary:box-shadow
 
- /*Font Size */
- --fontSize-small: 2rem;
+
+ /* Font sizes */
+  --fontSize-small: 1.6rem;
  --fontSize-medium:2.4rem;
  --fontSize-large:3rem;
  --fontSize-extraLarge:4.4rem;

@@ -13,14 +13,16 @@ export const Navbar = ({ logo, buttons, altLogoText }) => {
   ));
   return (
     <div className={styles.navbar}>
-      <Image
-        key={logo}
-        src={logo}
-        className={styles.logo}
-        priority={true}
-        alt={altLogoText}
-        blurDataURL="../../../../../public/assets/img/header/blur.jpg"
-      />
+      <Link href={"/"}>
+        <Image
+          key={logo}
+          src={logo}
+          className={styles.logo}
+          priority={true}
+          alt={altLogoText}
+          blurDataURL="../../../../../public/assets/img/header/blur.jpg"
+        />
+      </Link>
       <ul className={styles.btn_container}>{navbarButtons}</ul>
     </div>
   );

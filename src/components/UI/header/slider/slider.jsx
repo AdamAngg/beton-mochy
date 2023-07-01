@@ -1,5 +1,4 @@
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-
 import { useSlider } from "./useSlider.hook";
 import { UseSlowLoad } from "@/hooks/useSlowLoad.hook";
 import Image from "next/image";

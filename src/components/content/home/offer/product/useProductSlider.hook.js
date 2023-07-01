@@ -5,6 +5,7 @@ export const useProductSlider = ({ array }) => {
   const [transition, setTransition] = useState("all 0.3s");
   const [disabled, setDisabled] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
+  const [direction, setDirection] = useState(false);
 
   const blockNavigation = () => {
     setDisabled(true);
@@ -21,6 +22,7 @@ export const useProductSlider = ({ array }) => {
       setTranslateX((prevTranslateX) => prevTranslateX + 20);
       setCurrentIndex((prevIndex) => prevIndex - 1);
       setTextIndex((prevIndex) => prevIndex - 1);
+      setDirection(true);
     }
     blockNavigation();
   };
@@ -30,6 +32,7 @@ export const useProductSlider = ({ array }) => {
       setTranslateX((prevTranslateX) => prevTranslateX - 20);
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setTextIndex((prevIndex) => prevIndex + 1);
+      setDirection(false);
     }
     blockNavigation();
   };
@@ -54,5 +57,5 @@ export const useProductSlider = ({ array }) => {
   }
   if (textIndex < 0) setTextIndex(textIndex + array.length);
 
-  return { handleClickPrevious, handleClickNext, textIndex, style };
+  return { handleClickPrevious, handleClickNext, textIndex, style, direction };
 };
