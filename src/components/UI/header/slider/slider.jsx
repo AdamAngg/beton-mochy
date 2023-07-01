@@ -11,7 +11,7 @@ export const Slider = ({ images, altText }) => {
   const { imageLoaded, handleImageLoad } = UseSlowLoad();
   return (
     <>
-      <div className={styles.header}>
+      <nav className={styles.header}>
         <ion-icon
           onClick={decreaseIndex}
           name="chevron-forward-outline"
@@ -23,7 +23,7 @@ export const Slider = ({ images, altText }) => {
           name="chevron-back-outline"
           data-set="left"
         ></ion-icon>
-      </div>
+      </nav>
       <TransitionGroup>
         <CSSTransition
           key={currentSlideIndex}

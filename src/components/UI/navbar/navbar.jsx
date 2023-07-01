@@ -1,8 +1,12 @@
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+  });
   const navbarButtons = buttons.map((button, i) => (
     <li key={i} className={styles.btn_element}>
       <Link href="#perks" className={styles.btn_wrapper}></Link>
@@ -12,7 +16,7 @@ export const Navbar = ({ logo, buttons, altLogoText }) => {
     </li>
   ));
   return (
-    <div className={styles.navbar}>
+    <nav className={styles.navbar}>
       <Link href={"/"}>
         <Image
           key={logo}
@@ -24,6 +28,6 @@ export const Navbar = ({ logo, buttons, altLogoText }) => {
         />
       </Link>
       <ul className={styles.btn_container}>{navbarButtons}</ul>
-    </div>
+    </nav>
   );
 };
