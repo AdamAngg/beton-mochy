@@ -1,12 +1,23 @@
+.wrapper {
+  width: 100%;
+  background-color: black;
+
+  z-index: 7;
+  top: 0;
+  left: 0;
+}
+.sticky {
+  position: fixed !important;
+}
 .navbar {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 8rem;
   align-items: center;
-  margin: 0 35rem;
+  height: 8rem;
   transition: all 0.3s;
   z-index: 4;
+  margin: 0 35rem;
 }
 
 .logo {

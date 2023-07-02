@@ -61,7 +61,6 @@ export const Product = ({ items }) => {
         <TransitionGroup>
           <CSSTransition key={textIndex} classNames={transition} timeout={300}>
             <div className={styles.info_container}>
-              {console.log(textIndex)}
               <h3 className={styles.info_title}>{items[textIndex]?.title}</h3>
               <span className={styles.info_text}>{items[textIndex]?.text}</span>
               <Link href={items[textIndex]?.href}>

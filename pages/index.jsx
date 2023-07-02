@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Home } from "@/components/content/home/home";
+
 function index() {
   return (
     <>

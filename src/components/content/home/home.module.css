@@ -6,7 +6,6 @@
 .header {
   height: 70rem;
   position: relative;
-  overflow: hidden;
 }
 .perks {
   overflow: hidden;
@@ -30,7 +29,6 @@
   align-items: center;
   flex-direction: column;
   gap: 5rem;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
