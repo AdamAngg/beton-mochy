@@ -1,0 +1,102 @@
+.offers {
+  max-width: min(var(--website-width), 90vw);
+}
+.container_offers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4.8rem;
+  list-style: none;
+  align-content: center;
+}
+.wrapper_offer {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--boxshadow-primary);
+  position: relative;
+  transition: all 0.3s;
+}
+.wrapper_offer:hover {
+  transform: translateY(-7px);
+}
+.wrapper_offer::after {
+  content: "";
+  position: absolute;
+  background: var(--color-complementary);
+  top: -40%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: all 0.3s;
+  transform: skewY(350deg);
+  z-index: -1;
+}
+
+.wrapper_offer:hover::after {
+  transform: skewY(370deg);
+}
+.wrapper_offer:hover img {
+  transform: scale(1.2);
+}
+.wrapper_offer:hover .btn_offer {
+  transform: translateY(0%);
+}
+.info_offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  z-index: 2;
+}
+.title_offer {
+  font-size: var(--fontSize-medium);
+  color: white;
+}
+.text_offer {
+  text-align: center;
+  font-size: var(--fontSize-small);
+}
+.img_offer {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.img_offer img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.btn_offer {
+  transform: translateY(300%);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  font: inherit;
+  font-size: var(--fontSize-small);
+  background: none;
+  border-radius: 10rem;
+  padding: var(--min-padding);
+  color: var(--color-complementary);
+  border: 2px solid var(--color-complementary);
+  position: relative;
+  overflow: hidden;
+}
+.btn_offer::after {
+  position: absolute;
+  content: "";
+  left: -70%;
+  bottom: -50%;
+  background-color: var(--color-complementary);
+  border-radius: 50%;
+  width: 70%;
+  height: 200%;
+  transition: all 0.3s;
+  z-index: -7;
+}
+.btn_offer:hover::after {
+  transform: scale(4);
+}
+.btn_offer:hover {
+  color: white;
+}
