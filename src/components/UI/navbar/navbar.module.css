@@ -1,13 +1,17 @@
 .wrapper {
   width: 100%;
-  background-color: black;
-
   z-index: 7;
   top: 0;
   left: 0;
+
+  transition: all 0.3s ease-in;
 }
 .sticky {
   position: fixed !important;
+  background-color: black;
+  padding-bottom: 1rem;
+  transform: translateY(-100%);
+  transform: translateY(0);
 }
 .navbar {
   position: relative;

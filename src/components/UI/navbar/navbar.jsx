@@ -2,30 +2,10 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
-  const { ref, inView, entry } = useInView({
-    trackVisibility: true,
-    threshold: 0.5,
-    delay: 100,
-  });
-  useEffect(() => {
-    const fixedTarget = document.querySelector("#box");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const target = entry.target;
-        if (entry.isIntersecting) {
-          fixedTarget.style.position = "static";
-        } else {
-          fixedTarget.style.position = "fixed";
-        }
-      });
-    });
-
-    observer.observe(document.querySelector("#box1"));
-  }, []);
-
   const navbarButtons = buttons.map((button, i) => (
     <li key={i} className={styles.btn_element}>
       <Link href="#perks" className={styles.btn_wrapper}></Link>
@@ -34,22 +14,39 @@ export const Navbar = ({ logo, buttons, altLogoText }) => {
       </button>
     </li>
   ));
-  console.log(entry?.isVisible);
+
+  const [vis, setVis] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setVis(false);
+      } else setVis(true);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div id="box1" className={`${styles.wrapper}`}>
-      <nav id="box" className={`${styles.navbar} `}>
-        <Link href={"/"}>
-          <Image
-            key={logo}
-            src={logo}
-            className={styles.logo}
-            priority={true}
-            alt={altLogoText}
-            blurDataURL={logo.blurDataURL}
-          />
-        </Link>
-        <ul className={styles.btn_container}>{navbarButtons}</ul>
-      </nav>
-    </div>
+    <>
+      <div className={`${styles.wrapper} ${vis ? "" : styles.sticky}`}>
+        <nav id="box" className={`${styles.navbar} `}>
+          <Link href={"/"}>
+            <Image
+              key={logo}
+              src={logo}
+              className={styles.logo}
+              priority={true}
+              alt={altLogoText}
+              blurDataURL={logo.blurDataURL}
+            />
+          </Link>
+          <ul className={styles.btn_container}>{navbarButtons}</ul>
+        </nav>
+      </div>
+    </>
   );
 };
