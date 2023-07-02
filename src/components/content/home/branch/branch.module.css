@@ -1,0 +1,98 @@
+.branch {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  max-width: min(var(--website-width), 90vw);
+}
+.branch_title {
+  font: inherit;
+  font-size: var(--fontSize-extraLarge);
+  position: relative;
+  font-weight: 600;
+  text-align: center;
+  width: auto;
+}
+.branch_title::after {
+  position: absolute;
+  content: "";
+  left: 35%;
+  bottom: -30%;
+  background-color: var(--color-complementary);
+  width: 30%;
+  height: 3px;
+  transition: all 0.3s;
+}
+.branch_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: var(--boxshadow-primary);
+  background-image: url("../../../../../public/assets/img/about/bg-about.png");
+}
+.branch_info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--padding-base);
+  gap: 2rem;
+}
+.branch_text {
+  height: 100%;
+  font-size: var(--fontSize-medium);
+}
+.branch_img {
+  display: block;
+}
+.branch_img img {
+  width: 100%;
+}
+.branch_btn_right {
+  transition: all 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  font: inherit;
+  font-size: var(--fontSize-small);
+  background: var(--color-complementary);
+  border-radius: 10rem;
+  padding: 1.5rem 3.5rem;
+  border: 2px solid var(--color-complementary);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn_text {
+  position: relative;
+  color: white;
+  transition: all 0.3s;
+  z-index: 4;
+}
+
+.branch_btns {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.branch_btn_left {
+  transition: all 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  font: inherit;
+  font-size: var(--fontSize-small);
+  background: none;
+  border-radius: 10rem;
+  padding: 1.5rem 3.5rem;
+  color: var(--color-complementary);
+  border: 2px solid var(--color-complementary);
+  position: relative;
+  overflow: hidden;
+}

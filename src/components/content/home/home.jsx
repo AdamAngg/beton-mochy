@@ -3,6 +3,7 @@ import { Header } from "../../UI/header/header";
 import { Perks } from "./perks/perks";
 import { About } from "./about/about";
 import { Offer } from "./offer/offer";
+import { Branch } from "./branch/branch";
 
 const HomeComponents = [
   {
@@ -28,6 +29,12 @@ const HomeComponents = [
     styleName: "offer",
     witdh: false,
     id: "offer",
+  },
+  {
+    component: <Branch />,
+    styleName: "branch",
+    witdh: false,
+    id: "branch",
   },
 ];
 export const Home = () => {

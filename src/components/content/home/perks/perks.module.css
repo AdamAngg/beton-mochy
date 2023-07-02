@@ -19,6 +19,7 @@
 }
 .main_title::after {
   position: absolute;
+  text-align: center;
   content: "";
   left: 45%;
   bottom: -30%;

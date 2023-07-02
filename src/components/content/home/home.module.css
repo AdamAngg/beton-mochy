@@ -37,3 +37,6 @@
   -ms-user-select: none;
   user-select: none;
 }
+.branch {
+  margin: 0 auto;
+}
