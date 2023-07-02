@@ -1,6 +1,13 @@
 .offers {
   max-width: min(var(--website-width), 90vw);
 }
+.main_title_offers {
+  font: inherit;
+  font-size: var(--fontSize-extraLarge);
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
 .container_offers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

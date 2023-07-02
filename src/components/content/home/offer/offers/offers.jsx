@@ -24,7 +24,7 @@ export const Offers = ({ offers }) => {
   return (
     <>
       <div className={styles.offers}>
-        <h1 className={styles.main_title_offers}></h1>
+        <h1 className={styles.main_title_offers}>Nasze oferty</h1>
         <ul className={styles.container_offers}>{elements}</ul>
       </div>
     </>
