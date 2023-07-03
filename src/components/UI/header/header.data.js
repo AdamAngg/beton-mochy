@@ -6,12 +6,12 @@ export const images = [
   [betoniarz1, "Zdjecie przestawia gruszke "],
 ];
 export const navbarBtn = [
-  "place",
-  "place",
-  "place",
-  "place",
-  "place",
-  "place",
-  "place",
+  { name: "home", href: "/" },
+  { name: "section1", href: "#perks" },
+  { name: "section2", href: "#about" },
+  { name: "section3", href: "#offer" },
+  { name: "section4", href: "#branch" },
+  { name: "section5", href: "/" },
+  { name: "kontakt", href: "/" },
 ];
 export const logo = { logo: logoBeton, text: "Logo firmy Betoniarnia Przemęt" };

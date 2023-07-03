@@ -16,7 +16,7 @@
 }
 .footer_logo {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: column;
   gap: 1.4rem;

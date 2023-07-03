@@ -11,6 +11,9 @@
   z-index: -1;
   transition: opacity 1s;
 }
+.disable {
+  display: none;
+}
 .loaded {
   opacity: 1;
 }

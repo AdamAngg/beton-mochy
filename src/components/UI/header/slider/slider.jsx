@@ -5,13 +5,13 @@ import Image from "next/image";
 import styles from "./slider.module.css";
 import trans from "./sliderTransition.module.css";
 
-export const Slider = ({ images, altText }) => {
+export const Slider = ({ images, altText, showNav }) => {
   const { selectedImage, increaseIndex, decreaseIndex, currentSlideIndex } =
     useSlider({ startingIndex: 0, images: images, delay: 10000000000000 });
   const { imageLoaded, handleImageLoad } = UseSlowLoad();
   return (
     <>
-      <nav className={styles.header}>
+      <nav className={`${styles.header} ${showNav ? " " : styles.disable}`}>
         <ion-icon
           onClick={decreaseIndex}
           name="chevron-forward-outline"
@@ -36,7 +36,7 @@ export const Slider = ({ images, altText }) => {
             className={`${styles.image} ${imageLoaded ? styles.loaded : ""}`}
             priority={true}
             alt={altText[currentSlideIndex]}
-            blurDataURL={selectedImage.blurDataURL}
+            blurDataURL={selectedImage?.blurDataURL}
           />
         </CSSTransition>
       </TransitionGroup>

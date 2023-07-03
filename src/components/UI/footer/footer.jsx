@@ -9,7 +9,7 @@ export const Footer = () => {
     return (
       <li className={styles.footer_offer} key={index}>
         <ion-icon name="chevron-forward-outline"></ion-icon>
-        <Link href={element?.href}>
+        <Link href={`${element?.href + element?.title}`}>
           <p>{element?.title}</p>
         </Link>
       </li>

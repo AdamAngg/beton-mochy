@@ -6,6 +6,7 @@ import zd5 from "@/../public/assets/img/offer/product/5.webp";
 import zd6 from "@/../public/assets/img/offer/product/6.webp";
 import zd7 from "@/../public/assets/img/offer/product/7.webp";
 import z from "@/../public/assets/img/header/betoniarz1.jpg";
+import { removePolishChars } from "@/helpers/removePolishChars.helper";
 export const items = [
   {
     data: zd1,
@@ -63,27 +64,27 @@ export const offersItems = [
     alt: "Alt",
     title: "Oferta1",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod tenetur asperiores, ratione accusantium at aut cupiditate voluptates autem repellendus!",
-    href: "/",
+    href: `/oferta/`,
   },
   {
     data: z,
     alt: "Alt",
     title: "Oferta2",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod tenetur asperiores, ratione accusantium at aut cupiditate voluptates autem repellendus!",
-    href: "/",
+    href: `/oferta/`,
   },
   {
     data: z,
     alt: "Alt",
     title: "Oferta3",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod tenetur asperiores, ratione accusantium at aut cupiditate voluptates autem repellendus!",
-    href: "/",
+    href: `/oferta/`,
   },
   {
     data: z,
     alt: "Alt",
     title: "Oferta4",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod tenetur asperiores, ratione accusantium at aut cupiditate voluptates autem repellendus!",
-    href: "/",
+    href: `/oferta/`,
   },
 ];

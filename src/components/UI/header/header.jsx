@@ -13,7 +13,7 @@ export const Header = () => {
     <>
       <header className={styles.section}>
         <Navbar logo={logo.logo} buttons={navbarBtn} altLogoText={logo.text} />
-        <Slider images={onlyImages} altText={onlyAltText} />;
+        <Slider images={onlyImages} altText={onlyAltText} showNav={true} />;
       </header>
     </>
   );

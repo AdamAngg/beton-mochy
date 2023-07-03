@@ -1,16 +1,16 @@
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
+
 import { useState } from "react";
 import { useEffect } from "react";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
   const navbarButtons = buttons.map((button, i) => (
     <li key={i} className={styles.btn_element}>
-      <Link href="#perks" className={styles.btn_wrapper}></Link>
+      <Link href={button.href} className={styles.btn_wrapper}></Link>
       <button className={styles.btn}>
-        <span>{button}</span>
+        <span>{button.name}</span>
       </button>
     </li>
   ));
