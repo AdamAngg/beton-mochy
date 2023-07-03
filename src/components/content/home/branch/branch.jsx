@@ -8,7 +8,12 @@ export const Branch = () => {
       <h1 className={styles.branch_title}>Filia w Grodzisku WLKP</h1>
       <div className={styles.branch_container}>
         <picture className={styles.branch_img}>
-          <Image height={450} src={zdjecie} />
+          <Image
+            src={zdjecie}
+            alt="Zdjecie filli w grodzisku"
+            priority={true}
+            blurDataURL={zdjecie.blurDataURL}
+          />
         </picture>
         <div className={styles.branch_info}>
           <span className={styles.branch_text}>

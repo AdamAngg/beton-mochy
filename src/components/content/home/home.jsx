@@ -4,6 +4,7 @@ import { Perks } from "./perks/perks";
 import { About } from "./about/about";
 import { Offer } from "./offer/offer";
 import { Branch } from "./branch/branch";
+import { Footer } from "@/components/UI/footer/footer";
 
 const HomeComponents = [
   {
@@ -35,6 +36,12 @@ const HomeComponents = [
     styleName: "branch",
     witdh: false,
     id: "branch",
+  },
+  {
+    component: <Footer />,
+    styleName: "footer",
+    witdh: false,
+    id: "footer",
   },
 ];
 export const Home = () => {

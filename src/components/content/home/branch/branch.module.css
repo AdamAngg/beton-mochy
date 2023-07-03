@@ -6,6 +6,10 @@
   align-items: center;
   gap: 5rem;
   max-width: min(var(--website-width), 90vw);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .branch_title {
   font: inherit;
@@ -50,6 +54,7 @@
   display: block;
 }
 .branch_img img {
+  height: 45rem;
   width: 100%;
 }
 .branch_btn_right {

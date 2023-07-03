@@ -39,4 +39,10 @@
 }
 .branch {
   margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid #eee;
 }
