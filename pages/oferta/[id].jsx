@@ -1,7 +1,7 @@
 import { offersItems } from "@/components/content/home/offer/offer.data";
 import Head from "next/head";
 import styles from "./id.module.css";
-
+import { removePolishChars } from "@/helpers/removePolishChars.helper";
 import { Footer } from "@/components/UI/footer/footer";
 import { Links } from "@/components/UI/footer/links.footer";
 import { Offers } from "@/components/content/offers/offers";
@@ -31,8 +31,10 @@ const OfferPage = ({ offer }) => {
 export default OfferPage;
 export const getStaticPaths = async () => {
   const paths = offersItems.map((offer) => {
+    const normalizedTitle = removePolishChars(offer.title);
+
     return {
-      params: { id: offer.title },
+      params: { id: normalizedTitle },
     };
   });
 
@@ -40,7 +42,10 @@ export const getStaticPaths = async () => {
 };
 export async function getStaticProps({ params }) {
   const { id } = params;
-  const offer = offersItems.find((offer) => offer.title === id);
+  const normalizedTitle = removePolishChars(id);
+  const offer = offersItems.find(
+    (offer) => removePolishChars(offer.title) === normalizedTitle
+  );
 
   return {
     props: { offer },

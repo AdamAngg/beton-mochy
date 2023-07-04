@@ -6,7 +6,6 @@ import zd5 from "@/../public/assets/img/offer/product/5.webp";
 import zd6 from "@/../public/assets/img/offer/product/6.webp";
 import zd7 from "@/../public/assets/img/offer/product/7.webp";
 import z from "@/../public/assets/img/header/betoniarz1.jpg";
-import { removePolishChars } from "@/helpers/removePolishChars.helper";
 export const items = [
   {
     data: zd1,
