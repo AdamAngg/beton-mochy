@@ -5,20 +5,11 @@ import Image from "next/image";
 import { Footer } from "@/components/UI/footer/footer";
 import { Navbar } from "@/components/UI/navbar/navbar";
 import logo from "../../public/assets/img/navbar/logoBeton.png";
-import Link from "next/link";
-import styles1 from "../../src/components/UI/footer/footer.module.css";
+
+import { Links } from "@/components/UI/footer/links.footer";
 const OfferPage = ({ offer }) => {
   const btn = [{ name: "Powrót", href: "/" }];
-  const links = offersItems.map((element, index) => {
-    return (
-      <li className={styles1.footer_offer} key={index}>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-        <Link href={`${element?.href + element?.title}`}>
-          <p>{element?.title}</p>
-        </Link>
-      </li>
-    );
-  });
+  console.log(Links);
   return (
     <>
       <Head>
@@ -73,11 +64,9 @@ const OfferPage = ({ offer }) => {
             </span>
           </div>
         </main>
-        <aside className={styles1.aside_container}>
-          <div className={styles1.footer_element}>
-            <h5 className={styles1.title}>Oferty</h5>
-            <ul className={styles1.contact}>{links}</ul>
-          </div>
+        <aside className={styles.aside_container}>
+          <div className={styles.links_container}></div>
+          <Links />
         </aside>
       </div>
       <section className={styles.footer}>
