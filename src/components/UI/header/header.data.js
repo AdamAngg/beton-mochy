@@ -14,4 +14,5 @@ export const navbarBtn = [
   { name: "section5", href: "/" },
   { name: "kontakt", href: "/" },
 ];
+export const singleNavbarBtn = [{ name: "Powrót", href: "/" }];
 export const logo = { logo: logoBeton, text: "Logo firmy Betoniarnia Przemęt" };

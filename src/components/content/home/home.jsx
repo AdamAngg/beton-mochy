@@ -8,7 +8,7 @@ import { Footer } from "@/components/UI/footer/footer";
 
 const HomeComponents = [
   {
-    component: <Header />,
+    component: <Header headerSlider={true} headerStatic={false} />,
     styleName: "header",
     witdh: false,
     id: "header",

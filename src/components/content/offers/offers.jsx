@@ -1,12 +1,16 @@
-const OffersComponents = [
-  {
-    component: <Header />,
-    styleName: "header",
-    witdh: false,
-    id: "header",
-  },
-];
-export const Offers = () => {
+import styles from "./offers.module.css";
+import { Header } from "@/components/UI/header/header";
+
+export const Offers = ({ offer }) => {
+  const OffersComponents = [
+    {
+      component: (
+        <Header headerSlider={false} headerStatic={true} offer={offer} />
+      ),
+      styleName: "header",
+      id: "header",
+    },
+  ];
   const OffersComponentsSections = OffersComponents.map((component, index) => {
     return (
       <section
