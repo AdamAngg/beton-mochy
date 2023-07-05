@@ -1,7 +1,6 @@
 import styles from "./footer.module.css";
 import { offersItems } from "@/components/content/home/offer/offer.data";
 import Link from "next/link";
-import { removePolishChars } from "@/helpers/removePolishChars.helper";
 import { useState } from "react";
 
 export const Links = () => {
@@ -11,7 +10,6 @@ export const Links = () => {
   };
 
   const links = offersItems.map((element, index) => {
-    const normalizedTitle = removePolishChars(element.title);
     const isActive = activeIndex === index;
     return (
       <li
@@ -25,7 +23,7 @@ export const Links = () => {
           name="chevron-forward-outline"
           className={`${isActive ? styles.footer_active : ""}`}
         ></ion-icon>
-        <Link href={`${element.href + normalizedTitle}`}>
+        <Link href={`${element.normalizedTitle}`}>
           <p>{element?.title}</p>
         </Link>
       </li>

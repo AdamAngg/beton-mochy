@@ -1,10 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./offers.module.css";
-import { removePolishChars } from "@/helpers/removePolishChars.helper";
 export const Offers = ({ offers }) => {
   const elements = offers.map((element, index) => {
-    const normalizedTitle = removePolishChars(element.title);
     return (
       <li className={`${styles.wrapper_offer}`} key={index}>
         <picture className={styles.img_offer}>
@@ -18,7 +16,7 @@ export const Offers = ({ offers }) => {
         <div className={styles.info_offer}>
           <h3 className={styles.title_offer}>{element?.title}</h3>
           <span className={styles.text_offer}>{element?.text}</span>
-          <Link href={`${element.href + normalizedTitle}`}>
+          <Link href={`${element.normalizedTitle}`}>
             <button className={styles.btn_offer}>Zobacz więcej</button>
           </Link>
         </div>
