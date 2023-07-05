@@ -7,7 +7,7 @@ export const Main = ({ offer }) => {
         <h1 className={styles.main_title}>{offer.title}</h1>
       </div>
       <picture className={styles.main_image}>
-        <Image src={offer.data} />
+        <Image aria-hidden="true" src={offer.data} />
       </picture>
       <div className={styles.main_text}>
         <span>{offer.longerText}</span>

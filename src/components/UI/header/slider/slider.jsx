@@ -31,6 +31,7 @@ export const Slider = ({ images, altText, showNav }) => {
           timeout={2000}
         >
           <Image
+            aria-hidden="true"
             onLoad={handleImageLoad}
             src={selectedImage}
             className={`${styles.image} ${imageLoaded ? styles.loaded : ""}`}

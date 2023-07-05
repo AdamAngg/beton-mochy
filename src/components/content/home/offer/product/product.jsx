@@ -13,6 +13,7 @@ export const Product = ({ items }) => {
       <>
         <picture key={index} className={styles.sliderItem}>
           <Image
+            aria-hidden="true"
             width={305}
             height={305}
             priority={true}

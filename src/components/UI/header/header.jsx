@@ -32,7 +32,12 @@ export const Header = ({ headerSlider, headerStatic, offer }) => {
             altLogoText={logo?.text}
             buttons={singleNavbarBtn}
           />
-          <Image className={styles.header_img} src={offer?.data} />
+          <Image
+            aria-hidden="true"
+            className={styles.header_img}
+            src={offer?.data}
+            alt={offer?.alt}
+          />
           <h1 className={styles.title}>{offer?.title}</h1>
         </section>
       )}

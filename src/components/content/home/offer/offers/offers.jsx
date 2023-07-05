@@ -7,6 +7,7 @@ export const Offers = ({ offers }) => {
       <li className={`${styles.wrapper_offer}`} key={index}>
         <picture className={styles.img_offer}>
           <Image
+            aria-hidden="true"
             width={200}
             height={200}
             src={element?.data.src}

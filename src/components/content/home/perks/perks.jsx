@@ -11,6 +11,7 @@ export const Perks = () => {
       <div key={i} className={styles.column_container}>
         <div className={styles.border}></div>
         <Image
+          aria-hidden="true"
           onLoad={handleImageLoad}
           src={perk.icon}
           className={`${styles.icons} ${imageLoaded ? styles.loaded : ""}`}

@@ -8,6 +8,8 @@
 }
 .main_title_wrapper {
   margin-top: 5rem;
+  opacity: 0;
+  transform: translateY(100%);
   display: flex;
   justify-content: center;
   -webkit-user-select: none;
