@@ -32,7 +32,8 @@ export default OfferPage;
 export const getStaticPaths = async () => {
   const paths = offersItems.map((offer) => {
     const normalizedTitle = removePolishChars(offer.title);
-
+    offersItems.normalizedTitle = normalizedTitle;
+    console.log(offersItems.normalizedTitle);
     return {
       params: { id: normalizedTitle },
     };

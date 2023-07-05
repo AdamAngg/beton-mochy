@@ -41,6 +41,7 @@ a:visited,
 a:active,
 a:hover {
   text-decoration: none;
+  color: var(--font-primary);
 }
 input:focus {
   outline: none;

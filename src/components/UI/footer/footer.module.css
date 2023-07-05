@@ -74,6 +74,12 @@
 .footer_offer:hover ion-icon {
   transform: translateX(0%);
 }
+.footer_active ion-icon {
+  transform: translateX(0%);
+}
+.footer_active {
+  transform: translateX(0%);
+}
 .allWave {
   background: url("../../../../public/assets/img/footer/wave2.svg");
   position: absolute;

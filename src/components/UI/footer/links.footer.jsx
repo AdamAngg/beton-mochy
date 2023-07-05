@@ -1,12 +1,31 @@
 import styles from "./footer.module.css";
 import { offersItems } from "@/components/content/home/offer/offer.data";
 import Link from "next/link";
+import { removePolishChars } from "@/helpers/removePolishChars.helper";
+import { useState } from "react";
+
 export const Links = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
   const links = offersItems.map((element, index) => {
+    const normalizedTitle = removePolishChars(element.title);
+    const isActive = activeIndex === index;
     return (
-      <li className={styles.footer_offer} key={index}>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-        <Link href={`${element?.href + element?.title}`}>
+      <li
+        onClick={() => handleClick(index)}
+        className={`${styles.footer_offer} ${
+          isActive ? styles.footer_active : ""
+        }`}
+        key={index}
+      >
+        <ion-icon
+          name="chevron-forward-outline"
+          className={`${isActive ? styles.footer_active : ""}`}
+        ></ion-icon>
+        <Link href={`${element.href + normalizedTitle}`}>
           <p>{element?.title}</p>
         </Link>
       </li>

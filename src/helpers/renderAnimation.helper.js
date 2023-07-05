@@ -16,7 +16,7 @@ export const renderAnimation = () => {
         { opacity: 0, x: 1000 },
         { opacity: 0.5, x: 0, duration: 0.5, stagger: { each: 0.1 } }
       );
-      console.log(entry[0].isIntersecting);
+
       if (entry[0].isIntersecting) {
         tlPerks.play();
       } else {
