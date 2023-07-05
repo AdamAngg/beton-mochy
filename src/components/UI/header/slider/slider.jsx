@@ -16,12 +16,16 @@ export const Slider = ({ images, altText, showNav }) => {
           onClick={decreaseIndex}
           name="chevron-forward-outline"
           data-set="right"
+          role="img"
+          class="md hydrated"
         ></ion-icon>
 
         <ion-icon
           onClick={increaseIndex}
           name="chevron-back-outline"
           data-set="left"
+          role="img"
+          class="md hydrated"
         ></ion-icon>
       </nav>
       <TransitionGroup>

@@ -10,19 +10,17 @@ export const Product = ({ items }) => {
 
   const products = items.map((item, index) => {
     return (
-      <>
-        <picture key={index} className={styles.sliderItem}>
-          <Image
-            aria-hidden="true"
-            width={305}
-            height={305}
-            priority={true}
-            src={item.data.src}
-            alt={`Obraz pokazuje ${item.alt}`}
-            blurDataURL={item.data.blurDataURL}
-          />
-        </picture>
-      </>
+      <picture key={index} className={styles.sliderItem}>
+        <Image
+          aria-hidden="true"
+          width={305}
+          height={305}
+          priority={true}
+          src={item.data.src}
+          alt={`Obraz pokazuje ${item.alt}`}
+          blurDataURL={item.data.blurDataURL}
+        />
+      </picture>
     );
   });
 
@@ -42,12 +40,16 @@ export const Product = ({ items }) => {
               onClick={handleClickNext}
               name="chevron-forward-outline"
               data-set="right"
+              role="img"
+              class="md hydrated"
             ></ion-icon>
 
             <ion-icon
               onClick={handleClickPrevious}
               name="chevron-back-outline"
               data-set="left"
+              role="img"
+              class="md hydrated"
             ></ion-icon>
           </nav>
 

@@ -20,6 +20,8 @@ export const Links = () => {
         key={index}
       >
         <ion-icon
+          role="img"
+          class="md hydrated"
           name="chevron-forward-outline"
           className={`${isActive ? styles.footer_active : ""}`}
         ></ion-icon>
