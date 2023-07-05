@@ -1,4 +1,6 @@
 import styles from "./home.module.css";
+import { useEffect } from "react";
+import { renderAnimation } from "@/helpers/renderAnimation.helper";
 import { Header } from "../../UI/header/header";
 import { Perks } from "./perks/perks";
 import { About } from "./about/about";
@@ -46,6 +48,7 @@ const HomeComponents = [
 ];
 export const Home = () => {
   const HomeComponentsSections = HomeComponents.map((component, index) => {
+    renderAnimation();
     return (
       <section
         id={component.id}
