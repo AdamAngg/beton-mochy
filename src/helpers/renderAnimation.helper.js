@@ -11,21 +11,20 @@ export const renderAnimation = () => {
 
       const tlPerks = gsap.timeline();
 
-      tlPerks.fromTo(
-        Array.from(perks),
-        { opacity: 0, x: 1000 },
-        { opacity: 0.5, x: 0, duration: 0.5, stagger: { each: 0.1 } }
-      );
+      tlPerks.to(Array.from(perks), {
+        opacity: 0.5,
+        x: 0,
+        duration: 0.5,
+        stagger: { each: 0.2 },
+      });
 
       if (entry[0].isIntersecting) {
         tlPerks.play();
-      } else {
-        tlPerks.reverse(0);
       }
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.45,
+      threshold: 0.9,
     });
 
     const sections = document.querySelectorAll(`.${stylesHome.perks}`);

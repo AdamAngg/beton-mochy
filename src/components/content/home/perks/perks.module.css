@@ -57,7 +57,8 @@
   position: relative;
   transition: all 1s;
   filter: brightness(0.5);
-  opacity: 0.5;
+  opacity: 0;
+  transform: translateX(100%);
 }
 .column_container::before,
 .column_container::after {
@@ -98,8 +99,8 @@
   right: 0;
 }
 .column_container:hover {
-  opacity: 1;
-  filter: brightness(1);
+  opacity: 1 !important;
+  filter: brightness(1) !important;
   transform: translateY(-10px);
 }
 .column_container:hover::before,
