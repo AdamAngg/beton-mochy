@@ -3,10 +3,7 @@
   margin: auto;
   width: 100%;
 }
-.header {
-  height: 70rem;
-  position: relative;
-}
+
 .perks {
   overflow: hidden;
   background-image: url("../../../../public/assets/img/perks/concrete.png");
@@ -40,9 +37,4 @@
 .branch {
   margin: 0 auto;
   margin-bottom: 10rem;
-}
-.footer {
-  position: relative;
-  overflow: hidden;
-  border-top: 2px solid #eee;
 }

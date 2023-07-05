@@ -2,10 +2,9 @@ import { offersItems } from "@/components/content/home/offer/offer.data";
 import Head from "next/head";
 import styles from "./id.module.css";
 import { removePolishChars } from "@/helpers/removePolishChars.helper";
-import { Footer } from "@/components/UI/footer/footer";
 import { Links } from "@/components/UI/footer/links.footer";
-import { Offers } from "@/components/content/offers/offers";
 import { Main } from "@/components/content/offers/main/main";
+
 const OfferPage = ({ offer }) => {
   return (
     <>
@@ -13,7 +12,6 @@ const OfferPage = ({ offer }) => {
         <title>Betoniarnia.mochy.pl - {offer.title}</title>
       </Head>
 
-      <Offers offer={offer} />
       <div className={styles.container}>
         <Main offer={offer} />
         <aside className={styles.aside_container}>
@@ -22,9 +20,6 @@ const OfferPage = ({ offer }) => {
           </div>
         </aside>
       </div>
-      <section className={styles.footer}>
-        <Footer />
-      </section>
     </>
   );
 };

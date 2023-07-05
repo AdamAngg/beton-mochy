@@ -25,7 +25,7 @@ export const renderAnimation = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 1,
+      threshold: 0.45,
     });
 
     const sections = document.querySelectorAll(`.${stylesHome.perks}`);

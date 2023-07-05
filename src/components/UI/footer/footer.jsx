@@ -5,7 +5,7 @@ import { Links } from "./links.footer";
 import { Map } from "./map.footer";
 export const Footer = () => {
   return (
-    <>
+    <section className={styles.footer_main}>
       <footer className={styles.footer}>
         <div className={styles.footer_container}>
           <Madeby />
@@ -18,6 +18,6 @@ export const Footer = () => {
       <div className={`${styles.wave1} ${styles.allWave}`}></div>
       <div className={`${styles.wave2}  ${styles.allWave} `}></div>
       <div className={`${styles.wave3} ${styles.allWave}`}></div>
-    </>
+    </section>
   );
 };

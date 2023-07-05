@@ -1,7 +1,5 @@
 import styles from "./home.module.css";
-import { useEffect } from "react";
 import { renderAnimation } from "@/helpers/renderAnimation.helper";
-import { Header } from "../../UI/header/header";
 import { Perks } from "./perks/perks";
 import { About } from "./about/about";
 import { Offer } from "./offer/offer";
@@ -9,12 +7,6 @@ import { Branch } from "./branch/branch";
 import { Footer } from "@/components/UI/footer/footer";
 
 const HomeComponents = [
-  {
-    component: <Header headerSlider={true} headerStatic={false} />,
-    styleName: "header",
-    witdh: false,
-    id: "header",
-  },
   {
     component: <Perks />,
     styleName: "perks",
@@ -38,12 +30,6 @@ const HomeComponents = [
     styleName: "branch",
     witdh: false,
     id: "branch",
-  },
-  {
-    component: <Footer />,
-    styleName: "footer",
-    witdh: false,
-    id: "footer",
   },
 ];
 export const Home = () => {

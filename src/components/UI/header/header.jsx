@@ -13,26 +13,28 @@ export const Header = ({ headerSlider, headerStatic, offer }) => {
   return (
     <>
       {headerSlider && (
-        <header className={styles.section}>
-          <Navbar
-            logo={logo.logo}
-            buttons={navbarBtn}
-            altLogoText={logo.text}
-          />
-          <Slider images={onlyImages} altText={onlyAltText} showNav={true} />;
-        </header>
+        <section className={styles.header}>
+          <header className={styles.section}>
+            <Navbar
+              logo={logo?.logo}
+              buttons={navbarBtn}
+              altLogoText={logo?.text}
+            />
+            <Slider images={onlyImages} altText={onlyAltText} showNav={true} />;
+          </header>
+        </section>
       )}
 
       {headerStatic && (
-        <>
+        <section className={styles.header_static}>
           <Navbar
-            logo={logo.logo}
-            altLogoText={logo.text}
+            logo={logo?.logo}
+            altLogoText={logo?.text}
             buttons={singleNavbarBtn}
           />
-          <Image className={styles.header_img} src={offer.data} />
-          <h1 className={styles.title}>{offer.title}</h1>
-        </>
+          <Image className={styles.header_img} src={offer?.data} />
+          <h1 className={styles.title}>{offer?.title}</h1>
+        </section>
       )}
     </>
   );

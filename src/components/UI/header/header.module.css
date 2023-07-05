@@ -11,3 +11,12 @@
   bottom: -60%;
   z-index: -1;
 }
+.header {
+  height: 70rem;
+  position: relative;
+}
+.header_static {
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+}
