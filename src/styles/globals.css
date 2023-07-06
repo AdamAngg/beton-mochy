@@ -46,3 +46,17 @@ a:hover {
 input:focus {
   outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--btn-secondary);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: var(--color-complementary);
+}

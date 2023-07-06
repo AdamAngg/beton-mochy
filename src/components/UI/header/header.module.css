@@ -17,6 +17,7 @@
 }
 .header_static {
   height: 30rem;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }

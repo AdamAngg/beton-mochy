@@ -34,6 +34,7 @@ export const Header = ({ headerSlider, headerStatic, offer }) => {
           />
           <Image
             aria-hidden="true"
+            priority={true}
             className={styles.header_img}
             src={offer?.data}
             alt={offer?.alt}

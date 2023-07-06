@@ -19,9 +19,12 @@
   display: block;
   border-radius: 2rem;
   overflow: hidden;
+  height: auto;
+  width: auto;
 }
 .main_text {
   width: 50rem;
+
   font-size: var(--fontSize-small);
 }
 .main_title::after {
