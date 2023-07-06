@@ -4,8 +4,6 @@ import { Perks } from "./perks/perks";
 import { About } from "./about/about";
 import { Offer } from "./offer/offer";
 import { Branch } from "./branch/branch";
-import { Footer } from "@/components/UI/footer/footer";
-import index from "../../../../pages";
 
 const HomeComponents = [
   {

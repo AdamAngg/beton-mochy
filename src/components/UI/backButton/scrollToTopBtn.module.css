@@ -1,0 +1,18 @@
+.backButton_container {
+  position: fixed;
+  left: 98%;
+  top: 95%;
+}
+.backButton {
+  border: none;
+  color: var(--color-complementary);
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--btn-secondary);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.backButton ion-icon {
+  height: 2rem;
+  width: 2rem;
+}
