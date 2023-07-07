@@ -1,5 +1,13 @@
 .backButton_container {
   position: fixed;
+  left: 100%;
+  top: 95%;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 14;
+}
+.backButton_container_enter {
+  opacity: 1;
   left: 98%;
   top: 95%;
 }
@@ -15,4 +23,8 @@
 .backButton ion-icon {
   height: 2rem;
   width: 2rem;
+}
+.backButton:hover {
+  background-color: #fff;
+  border: 1px solid var(--color-complementary);
 }

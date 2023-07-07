@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
 
         <Footer />
-        {!inView && <ScrollToTopBtn />}
+        <ScrollToTopBtn show={!inView} />
         {console.log(inView)}
       </Content>
     </>
