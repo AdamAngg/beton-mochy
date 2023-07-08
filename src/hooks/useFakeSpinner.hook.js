@@ -7,7 +7,7 @@ export const useFakeSpinner = ({ isOnMainPage }) => {
     // Symulacja ładowania danych
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
   }, [isOnMainPage]);
 
   return { isLoading };

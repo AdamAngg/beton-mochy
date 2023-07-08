@@ -17,7 +17,7 @@ export const Offers = ({ offers }) => {
         <div className={styles.info_offer}>
           <h3 className={styles.title_offer}>{element?.title}</h3>
           <span className={styles.text_offer}>{element?.text}</span>
-          <Link href={`${element.normalizedTitle}`}>
+          <Link href={`${element.href}`}>
             <button className={styles.btn_offer}>Zobacz więcej</button>
           </Link>
         </div>

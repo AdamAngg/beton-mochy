@@ -1,21 +1,16 @@
 import styles from "./footer.module.css";
 import { offersItems } from "@/components/content/home/offer/offer.data";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/router";
 
 export const Links = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const handleClick = (index) => {
-    setActiveIndex(index);
-  };
-
+  const router = useRouter();
+  const dynamicPath = router.query.id;
   const links = offersItems.map((element, index) => {
-    const isActive = activeIndex === index;
     return (
       <li
-        onClick={() => handleClick(index)}
         className={`${styles.footer_offer} ${
-          isActive ? styles.footer_active : ""
+          dynamicPath === element.normalizedTitle ? styles.footer_active : ""
         }`}
         key={index}
       >
@@ -23,9 +18,11 @@ export const Links = () => {
           role="img"
           class="md hydrated"
           name="chevron-forward-outline"
-          className={`${isActive ? styles.footer_active : ""}`}
+          className={`${
+            dynamicPath === element.normalizedTitle ? styles.footer_active : ""
+          }`}
         ></ion-icon>
-        <Link href={`${element.normalizedTitle}`}>
+        <Link href={`${element.href}`}>
           <p>{element?.title}</p>
         </Link>
       </li>

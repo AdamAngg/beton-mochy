@@ -98,5 +98,6 @@ export const offersItems = [
 ];
 offersItems.forEach((item) => {
   const normalizedTitle = removePolishChars(item.title);
-  item.normalizedTitle = `${item.href + normalizedTitle}`;
+  item.normalizedTitle = `${normalizedTitle}`;
+  item.href = `${item.href + normalizedTitle}`;
 });

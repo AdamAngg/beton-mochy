@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./scrollToTopBtn.module.css";
 export const ScrollToTopBtn = ({ show }) => {
   const buttonClickHandler = () => {
