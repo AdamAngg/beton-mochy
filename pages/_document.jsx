@@ -4,6 +4,8 @@ function Document() {
   return (
     <Html lang="pl">
       <Head>
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <meta name="title" content="betoniarnia.mochy.pl" />
         <meta
           name="description"
