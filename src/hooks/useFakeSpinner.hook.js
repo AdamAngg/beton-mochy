@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useState } from "react";
-export const useFakeSpinner = ({ isOnMainPage }) => {
+export const useFakeSpinner = ({ isOnMainPage, dynamicPath, delay }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
     // Symulacja ładowania danych
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
-  }, [isOnMainPage]);
+    }, delay);
+  }, [isOnMainPage, dynamicPath]);
 
   return { isLoading };
 };

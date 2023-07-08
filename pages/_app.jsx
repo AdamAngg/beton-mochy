@@ -16,8 +16,13 @@ function MyApp({ Component, pageProps }) {
   });
   const router = useRouter([]);
   const isOnMainPage = router.pathname === "/";
+  const dynamicPath = router.query.id;
   const offer = pageProps.offer;
-  const { isLoading } = useFakeSpinner({ isOnMainPage });
+  const { isLoading } = useFakeSpinner({
+    isOnMainPage,
+    dynamicPath,
+    delay: 1000,
+  });
   return (
     <>
       <Head>

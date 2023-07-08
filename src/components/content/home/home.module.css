@@ -35,6 +35,7 @@
   user-select: none;
 }
 .branch {
-  margin: 0 auto;
   margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
 }

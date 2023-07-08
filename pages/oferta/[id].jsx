@@ -9,7 +9,7 @@ const OfferPage = ({ offer }) => {
   return (
     <>
       <Head>
-        <title>Betoniarnia.mochy.pl - {offer.title}</title>
+        <title>betoniarnia.mochy.pl - {offer.title}</title>
       </Head>
 
       <div className={styles.container}>

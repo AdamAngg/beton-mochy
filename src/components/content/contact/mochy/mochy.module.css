@@ -1,0 +1,25 @@
+.mochy_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.map {
+  margin: 0 auto;
+}
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+.contact {
+  gap: 2.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.contact li {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}

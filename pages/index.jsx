@@ -5,7 +5,7 @@ function index() {
   return (
     <>
       <Head>
-        <title>Betoniarnia.mochy.pl - Strona Główna</title>
+        <title>betoniarnia.mochy.pl - Strona Główna</title>
       </Head>
       <Home />
     </>
