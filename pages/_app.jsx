@@ -27,19 +27,21 @@ function MyApp({ Component, pageProps }) {
 
       <Content>
         {isLoading && <Spinner />}
-        {!isLoading && (
-          <>
-            <Header
-              headerSlider={isOnMainPage}
-              headerStatic={!isOnMainPage}
-              offer={offer}
-              ref={ref}
-            />
-            <Component {...pageProps} />
-            <Footer />
-            <ScrollToTopBtn show={!inView} />
-          </>
-        )}
+        <div style={{ opacity: isLoading ? 0 : 1, transition: "all 0.3s" }}>
+          {!isLoading && (
+            <>
+              <Header
+                headerSlider={isOnMainPage}
+                headerStatic={!isOnMainPage}
+                offer={offer}
+                ref={ref}
+              />
+              <Component {...pageProps} />
+              <Footer />
+              <ScrollToTopBtn show={!inView} />
+            </>
+          )}
+        </div>
       </Content>
     </>
   );
