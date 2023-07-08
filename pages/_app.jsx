@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
               />
               <Component {...pageProps} />
               <Footer />
-              <ScrollToTopBtn show={!inView} />
+              {isOnMainPage && <ScrollToTopBtn show={!inView} />}
             </>
           )}
         </div>
