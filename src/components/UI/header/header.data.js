@@ -11,7 +11,6 @@ export const navbarBtn = [
   { name: "section2", href: "#about" },
   { name: "section3", href: "#offer" },
   { name: "section4", href: "#branch" },
-  { name: "section5", href: "/" },
   { name: "kontakt", href: "/kontakt" },
 ];
 export const singleNavbarBtn = [{ name: "Powrót", href: "/" }];

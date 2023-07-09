@@ -38,3 +38,8 @@
   --fontSize-large: 3rem;
   --fontSize-extraLarge: 4.4rem;
 }
+@media (max-width: 1205px) {
+  :root {
+    --website-width: 100rem;
+  }
+}

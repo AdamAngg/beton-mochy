@@ -134,3 +134,11 @@
   -ms-user-select: none;
   user-select: none;
 }
+@media (max-width: 1343px) {
+  .container {
+    padding: var(--padding-large);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}

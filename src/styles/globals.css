@@ -13,9 +13,10 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth !important;
+  overflow-x: hidden !important;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden !important;
   min-height: 100vh;
   font-family: "Pathway Gothic One", sans-serif;
   background-color: var(--bg-primary);
@@ -59,4 +60,11 @@ input:focus {
 ::-webkit-scrollbar-thumb:vertical {
   height: 30px;
   background-color: var(--color-complementary);
+}
+
+@media (max-width: 1205px) {
+  html {
+    font-size: 60%;
+    scroll-behavior: smooth !important;
+  }
 }

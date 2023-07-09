@@ -106,7 +106,8 @@
   gap: 2.5rem;
   position: absolute;
   transition: all 0.3s;
-  left: 42%;
+  left: 50%;
+  transform: translate(-50%);
 }
 .info_text::after {
   position: absolute;

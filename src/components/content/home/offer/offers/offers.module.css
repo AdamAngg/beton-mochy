@@ -61,6 +61,8 @@
   color: white;
 }
 .text_offer {
+  word-wrap: none;
+  word-break: keep-all;
   text-align: center;
   font-size: var(--fontSize-small);
 }
@@ -106,4 +108,21 @@
 }
 .btn_offer:hover {
   color: white;
+}
+@media (max-width: 1205px) {
+  .container_offers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    list-style: none;
+    padding: 0 15rem 0 15rem;
+  }
+  .main_title_offers {
+    font: inherit;
+    font-size: var(--fontSize-extraLarge);
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0 15rem;
+  }
 }

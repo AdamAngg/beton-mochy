@@ -19,11 +19,13 @@
   height: 8rem;
   transition: all 0.3s;
   z-index: 4;
-  margin: 0 35rem;
+  margin: 0 auto;
+  width: var(--website-width);
 }
 
 .logo {
   cursor: pointer;
+  height: 100%;
 }
 .btn_container {
   display: flex;
@@ -104,4 +106,72 @@
 }
 .btn_element:hover {
   background-color: #00000072;
+}
+
+@media (max-width: 1000px) {
+  .btn_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(100%, -50%);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.915);
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s;
+  }
+  .btn_nav_container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+  }
+  .nav_btn_middle {
+    display: block;
+    content: " ";
+    height: 2px;
+    width: 2rem;
+    background-color: var(--color-complementary);
+    transition: all 0.5s;
+  }
+  .nav_btn_top {
+    position: absolute;
+    display: block;
+    content: " ";
+    top: 5px;
+    height: 2px;
+    width: 2rem;
+    background-color: var(--color-complementary);
+    transition: all 0.5s;
+  }
+  .nav_btn_bottom {
+    position: absolute;
+    display: block;
+    content: " ";
+    top: -5px;
+    height: 2px;
+    width: 2rem;
+    background-color: var(--color-complementary);
+    transition: all 0.5s;
+  }
+  .nav_btn_active {
+    transform: translateX(1000%);
+  }
+  .nav_btn_active_top {
+    transform: rotate(45deg);
+    top: 0px;
+    z-index: 15;
+  }
+  .nav_btn_active_bottom {
+    transform: rotate(-45deg);
+    z-index: 15;
+  }
+  .btn_container_active {
+    transform: translate(-50%, -50%);
+  }
 }
