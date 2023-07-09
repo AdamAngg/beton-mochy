@@ -1,11 +1,11 @@
-import styles from "./mochy.module.css";
+import styles from "../mochy/mochygrodzisk.module.css";
 import Link from "next/link";
 
 export const Mochy = () => {
   const mailtoLink = `mailto:betoniarnia@mochy.pl`;
   return (
     <>
-      <div className={styles.mochy_container}>
+      <div className={styles.container}>
         <div className={styles.map}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6250.486898019866!2d16.170738!3d51.994288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4705c33fe4842f61%3A0xe0cd1c55d9b4bdb6!2sBetoniarnia%20Mochy!5e1!3m2!1spl!2sus!4v1688817917457!5m2!1spl!2sus"
@@ -26,7 +26,7 @@ export const Mochy = () => {
                 class="md hydrated"
                 name="call-outline"
               ></ion-icon>
-              <p className="phone">Tel. 4866456645</p>
+              <p className="phone">Tel. 65 549 00 89</p>
             </li>
             <li>
               <ion-icon
@@ -35,7 +35,7 @@ export const Mochy = () => {
                 name="mail-outline"
               ></ion-icon>
               <p className={styles.email}>
-                <Link href={mailtoLink}>Mail: emm@emm.pl</Link>
+                <Link href={mailtoLink}>Mail: betoniarnia@mochy.pl</Link>
               </p>
             </li>
             <li>

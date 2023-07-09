@@ -1,4 +1,4 @@
-.mochy_container {
+.container {
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -22,4 +22,13 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+.element h5 {
+  font-size: var(--fontSize-large);
+}
+.contact {
+  font-size: var(--fontSize-small);
+}
+.contact ion-icon {
+  color: var(--color-complementary);
 }

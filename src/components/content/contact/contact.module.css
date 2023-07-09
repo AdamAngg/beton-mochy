@@ -1,11 +1,13 @@
 .main_container {
   margin-top: 10rem;
+  margin-bottom: 10rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 10rem 5rem 10rem 5rem;
 }
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20rem;
+  gap: 10rem;
 }

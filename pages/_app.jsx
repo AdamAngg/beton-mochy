@@ -9,6 +9,7 @@ import { ScrollToTopBtn } from "@/components/UI/scrollToTopBtn/scrollToTopBtn";
 import { Spinner } from "@/components/UI/spinner/spinner";
 import { useFakeSpinner } from "@/hooks/useFakeSpinner.hook";
 import Head from "next/head";
+import { contactInfo } from "@/components/content/contact/contact.data";
 
 function MyApp({ Component, pageProps }) {
   const [ref, inView] = useInView({
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
   const isOnMainPage = router.pathname === "/";
   const dynamicPath = router.query.id;
   const offer = pageProps.offer;
+  console.log(offer);
   const { isLoading } = useFakeSpinner({
     isOnMainPage,
     dynamicPath,
