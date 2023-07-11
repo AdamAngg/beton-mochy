@@ -3,6 +3,7 @@ import { Madeby } from "./madeby.footer";
 import { Contact } from "./contact.footer";
 import { Links } from "./links.footer";
 import { Map } from "./map.footer";
+import { Waves } from "./waves/waves";
 export const Footer = () => {
   return (
     <section className={styles.footer_main}>
@@ -14,10 +15,7 @@ export const Footer = () => {
           <Map />
         </div>
       </footer>
-      <div className={`${styles.wave} ${styles.allWave}`}></div>
-      <div className={`${styles.wave1} ${styles.allWave}`}></div>
-      <div className={`${styles.wave2}  ${styles.allWave} `}></div>
-      <div className={`${styles.wave3} ${styles.allWave}`}></div>
+      <Waves />
     </section>
   );
 };
