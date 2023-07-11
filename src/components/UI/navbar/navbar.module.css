@@ -107,7 +107,9 @@
 .btn_element:hover {
   background-color: #00000072;
 }
-
+.btn_nav_container {
+  list-style: none;
+}
 @media (max-width: 1000px) {
   .btn_container {
     display: flex;
