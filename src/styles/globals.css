@@ -68,3 +68,15 @@ input:focus {
     scroll-behavior: smooth !important;
   }
 }
+@media (max-width: 1000px) {
+  html {
+    font-size: 55%;
+    scroll-behavior: smooth !important;
+  }
+}
+@media (max-width: 877px) {
+  html {
+    font-size: 45%;
+    scroll-behavior: smooth !important;
+  }
+}

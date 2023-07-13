@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export const Navbar = ({ logo, buttons, altLogoText }) => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
   const onClickHandle = () => {
     setActive(!active);
   };

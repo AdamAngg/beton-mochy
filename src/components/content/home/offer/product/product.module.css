@@ -84,7 +84,6 @@
   will-change: transform, transition;
   position: relative;
 }
-
 .sliderItem {
   flex: 0 0 20%;
   max-width: 20%;

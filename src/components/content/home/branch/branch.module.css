@@ -101,3 +101,24 @@
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 621px) {
+  .branch_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: var(--boxshadow-primary);
+    background-image: url("../../../../../public/assets/img/about/bg-about.png");
+  }
+  .branch_img {
+    width: 100%;
+  }
+  .branch_btns {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+}

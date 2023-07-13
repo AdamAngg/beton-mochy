@@ -15,17 +15,15 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 8rem;
+  align-items: stretch;
   transition: all 0.3s;
   z-index: 4;
-  margin: 0 auto;
-  width: var(--website-width);
+  margin: 0 1rem;
 }
 
 .logo {
   cursor: pointer;
-  height: 100%;
+  height: 90%;
 }
 .btn_container {
   display: flex;
@@ -109,6 +107,7 @@
 }
 .btn_nav_container {
   list-style: none;
+  align-self: center;
 }
 @media (max-width: 1000px) {
   .btn_container {

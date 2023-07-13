@@ -9,13 +9,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding: 0 10rem 0 10rem;
 }
 .about {
-  width: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3.6rem;
+  text-align: center;
 }
 .title {
   font-size: var(--fontSize-extraLarge);
@@ -64,8 +65,8 @@
 @media (max-width: 1105px) {
   .container {
     display: flex;
-    margin: 10rem 0;
-    flex-direction: row;
+    margin: 10rem 0 0 0;
+    flex-direction: column;
     justify-content: space-around;
     gap: 5rem;
     align-items: center;
@@ -73,5 +74,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+}
+@media (min-width: 436px) {
+  .about {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.6rem;
   }
 }

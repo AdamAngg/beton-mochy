@@ -22,3 +22,8 @@
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 877px) {
+  .header {
+    height: 60rem;
+  }
+}
