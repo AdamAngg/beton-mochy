@@ -203,7 +203,7 @@
 }
 .enterActive {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(-50%);
 }
 .exit {
   transform: translateX(0);
