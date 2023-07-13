@@ -20,7 +20,7 @@ export const renderAnimation = () => {
         duration: 0.3,
       });
       tlPerks.to(Array.from(perks), {
-        opacity: 0.5,
+        opacity: 1,
         x: 0,
         duration: 0.3,
         stagger: { each: 0.2 },

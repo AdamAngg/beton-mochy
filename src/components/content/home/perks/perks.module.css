@@ -141,4 +141,31 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+  .column_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: var(--padding-base);
+    position: relative;
+    transition: all 1s;
+    filter: brightness(1);
+    opacity: 1;
+  }
+  .column_container::before,
+  .column_container::after {
+    content: "";
+  }
+  .column_container:hover {
+    opacity: 1;
+  }
+  .column_container:hover::before,
+  .column_container:hover::after {
+    opacity: 1;
+  }
+  .border:hover:after,
+  .border:hover:before {
+    opacity: 1;
+  }
 }
