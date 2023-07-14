@@ -15,15 +15,17 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
+  height: 8rem;
   transition: all 0.3s;
   z-index: 4;
-  margin: 0 1rem;
+  margin: 0 auto;
+  width: var(--website-width);
 }
 
 .logo {
   cursor: pointer;
-  height: 90%;
+  height: 100%;
 }
 .btn_container {
   display: flex;
@@ -110,6 +112,21 @@
   align-self: center;
 }
 @media (max-width: 1000px) {
+  .logo {
+    height: 100%;
+    object-fit: contain;
+  }
+  .navbar {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    transition: all 0.3s;
+    z-index: 4;
+    margin: 0 1rem;
+    width: auto;
+  }
   .btn_container {
     display: flex;
     flex-direction: column;
