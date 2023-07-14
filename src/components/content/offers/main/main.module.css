@@ -15,17 +15,24 @@
   position: relative;
   font-weight: 600;
 }
-.main_image {
+.main_image img {
   display: block;
   border-radius: 2rem;
   overflow: hidden;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
 }
 .main_text {
   width: 50rem;
 
   font-size: var(--fontSize-small);
+}
+.main_image {
+  display: block;
+  overflow: hidden;
+  height: 60%;
+  width: 60%;
+  object-fit: contain;
 }
 .main_title::after {
   position: absolute;
@@ -37,4 +44,20 @@
   width: 15%;
   height: 3px;
   transition: all 0.3s;
+}
+@media (max-width: 1000px) {
+  .main_image {
+    height: 50%;
+    width: 50%;
+  }
+}
+.main_text {
+  width: 50rem;
+
+  font-size: var(--fontSize-small);
+}
+@media (max-width: 430px) {
+  .main_text {
+    width: 40rem;
+  }
 }

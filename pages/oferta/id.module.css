@@ -22,3 +22,11 @@
   justify-content: center;
   top: 10%;
 }
+@media (max-width: 1000px) {
+  .aside_container {
+    display: none;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
