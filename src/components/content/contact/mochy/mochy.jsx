@@ -9,8 +9,6 @@ export const Mochy = () => {
         <div className={styles.map}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6250.486898019866!2d16.170738!3d51.994288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4705c33fe4842f61%3A0xe0cd1c55d9b4bdb6!2sBetoniarnia%20Mochy!5e1!3m2!1spl!2sus!4v1688817917457!5m2!1spl!2sus"
-            width="700"
-            height="400"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

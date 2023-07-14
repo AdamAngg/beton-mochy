@@ -4,7 +4,18 @@
   gap: 10rem;
 }
 .map {
-  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  height: 100%;
+  width: 100%;
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .element {
   display: flex;
@@ -17,6 +28,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .contact li {
   display: flex;
@@ -31,4 +43,6 @@
 }
 .contact ion-icon {
   color: var(--color-complementary);
+}
+@media (min-width: 436px) {
 }
