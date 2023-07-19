@@ -27,7 +27,7 @@ export const items = [
     alt: "Alt",
     title: "Blok3",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod tenetur asperiores, ratione accusantium at aut cupiditate voluptates autem repellendus!",
-    href: "/",
+    href: "/kontakt",
   },
   {
     data: zd4,

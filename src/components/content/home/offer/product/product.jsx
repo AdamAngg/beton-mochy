@@ -67,7 +67,9 @@ export const Product = ({ items }) => {
               <h3 className={styles.info_title}>{items[textIndex]?.title}</h3>
               <span className={styles.info_text}>{items[textIndex]?.text}</span>
               <Link href={items[textIndex]?.href}>
-                <button className={styles.info_button}>Zobacz więcej</button>
+                <button className={styles.info_button}>
+                  Dowiedz się więcej
+                </button>
               </Link>
             </div>
           </CSSTransition>
